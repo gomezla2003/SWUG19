@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <client_script><![CDATA[function($scope,$sce) {
+  /* widget controller */
+	  var c = this;
+
+	$("#click").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#adgenda").offset().top
+    }, 2000);
+});
+	
+	
+	c.on = function(description,topic,hospital,speaker,time,end_time,location){
+		c.data.description = description;
+		c.data.topic = topic;
+		c.data.hospital = hospital;
+		c.data.speaker = speaker;
+		c.data.time = time;
+		c.data.end_time = end_time;
+		c.data.location = location;
+    document.getElementById("overlay").style.display = "block";
+}
+
+	c.off = function(){
+    document.getElementById("overlay").style.display = "none";
+}
+	
+	c.addSession = function(ID){
+		c.data.sessionID = ID;
+		c.server.update();
+	
+	}
+		
+  c.removeSession = function(ID){
+		c.data.sessionIDr = ID;
+		c.server.update();
+	
+	}
+	
+	
+	$scope.attendingThisClass = function(ID){
+	var array = c.data.result;
+		var result = array.indexOf(ID);
+		if(result > 1)
+			return false;
+		return true;
+		
+//		alert(array + " " + ID + " " + result);
+  
+				 
+				 
+	}
+	
+	
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>//GLOBAL
+.global{
+ 
+}
+
+// COLOR BAR
+.global__accent-bar{
+  //position: fixed;
+  display:-webkit-box;display:-ms-flexbox;
+  -webkit-box-orient:horizontal;
+  -webkit-box-direction:normal;
+  -ms-flex-direction:row;
+  flex-direction:row;
+  -ms-flex-wrap:nowrap;
+  flex-wrap:nowrap;
+  -webkit-box-align:start;
+  -ms-flex-align:start;
+  align-items:flex-start;
+  overflow:hidden;
+  left:0;
+  width:100%;
+  position:absolute;
+}
+
+.global__accent-bar span{
+  display:block;
+  width:20%;
+  height:.5rem
+}
+@media (min-width:600px){
+  .global__accent-bar span{
+    height:.9rem}}
+.global__accent-bar .magenta{
+  background-color:#e62565
+}
+.global__accent-bar .green{background-color:#8ad000}
+.global__accent-bar .purple{background-color:#9a29af}
+.global__accent-bar .blue{background-color:#03a9f3}
+.global__accent-bar .yellow{background-color:#ffeb3c}
+.global__accent-bar:first-child{display:none}
+@media (min-width:1366px){
+  .global__accent-bar:first-child{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    left:-60%}}
+
+//Logo
+.logo{
+  float: left;
+  width:300px;
+  height:80px;
+  position:relative;
+  margin-top:30px;
+  margin-bottom 40px;
+
+}
+
+
+//Navigation menu
+.date{
+  text-align: center;
+}
+
+
+.nav__container{
+  position:relative;
+  top:40px;
+  left:0;
+  width:300px;
+  height: 450px;
+  background-color:#fff;
+  z-index:20;
+  -webkit-box-shadow:0 .5rem 2.5rem .6rem rgba(0,0,0,.25);
+  box-shadow:0 .5rem 2.5rem .6rem rgba(0,0,0,.25);
+  -webkit-transition:all .25s ease;
+  transition:all .25s ease}
+
+
+
+.nav__options-container{
+  display:block;
+  position:relative;
+}
+
+
+.nav__menu-container{
+  margin-bottom:5.8rem;
+  margin-top:30px;
+  padding-left:50px;
+  padding-right:50px;
+  padding-top:30px;
+}
+
+@media (min-width:768px){
+  .nav__menu-container{
+    margin-top:0;padding-right:1.6rem}}
+.nav__menu-container .nav__menu-item{
+  border-top:.1rem solid #f2f2f2;
+  padding:1.2rem 0;text-transform:uppercase}
+@media (min-width:768px){
+  .nav__menu-container .nav__menu-item{
+    padding:.4rem 0}}
+.nav__menu-container .nav__menu-link--undecorated{
+      color:gray;
+  text-decoration:none;
+  font-weight:800;
+  font-size:1.6rem}
+
+.nav__menu-container .nav__menu-link--undecorated:hover{
+  color:#000}
+
+//Sessions
+
+.sessionContainer{
+  width: 80%;
+  height: 150px;
+  background-color:#fff;
+  position:relative;
+  float: right;
+  margin-bottom:40px;
+  border: 2px solid purple;
+    border-radius: 5px;
+}
+@media only screen and (max-width :600px){
+  .sessionContainer{
+    width:100%;
+    float:none;
+  }}
+
+.topic{
+  color: #000;
+  //padding-bottom:10px;
+  font-size: 22px;
+}
+
+.description{
+   overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  
+}
+ 
+@media screen and (max-width: 600px) {
+  .hideMobile{
+    visibility: hidden;
+    clear: both;
+    margin: 10px auto 5px 20px;
+    display: none;
+  }}
+
+
+//POPUP
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 20;
+    cursor: pointer;
+  overflow: scroll;
+  
+}
+
+#text{
+    position: absolute;
+  width: 65%;
+    top: 50%;
+    left: 50%;
+    font-size: 20px;
+    color: black;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+  background-color:#eee;
+}
+.more{
+  cursor: pointer;
+position: absolute;
+    bottom: 0;}
+
+.add{
+  position: absolute;
+  bottom: 0;
+  right:0;
+  cursor: pointer;
+  font-size: 20px;
+  
+}
+
+//HEADER
+.wrapper{
+  width:80%;
+  float:right;
+}
+.header{
+  width: 90%;
+  background-color:#72246c;
+  text-align:center;
+  margin:auto;
+   -webkit-box-shadow:0 .5rem 2.5rem .6rem rgba(0,0,0,.25);
+  box-shadow:0 .5rem 2.5rem .6rem rgba(0,0,0,.25);
+  -webkit-transition:all .25s ease;
+  transition:all .25s ease
+}
+.header h1{
+  color:#ffb81c;
+}
+@media only screen and (max-width :600px){
+  .header{
+    float:none;
+    margin-bottom:10px;
+    margin-top:10px;
+    width: 100%;
+  }}
+
+
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>swug_myschedule</id>
+        <internal>false</internal>
+        <link/>
+        <name>SWUG MySchedule</name>
+        <option_schema/>
+        <public>true</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+	
+  data.is_logged_in = gs.getSession().isLoggedIn();
+	
+	var ses = new x_sthc_swug_19.SessionUtil();
+	
+	data.sessions = [];
+	data.sessions = ses.getList();
+	data.attendingSessions = ses.getAttendance();
+	data.result = JSON.stringify(data.attendingSessions);
+	
+
+	if(input){
+		
+		
+		if((input.sessionID != '')&&(input.sessionID)){
+			
+			addSession(input.sessionID,gs.getUserID());
+			data.attendingSessions = ses.getAttendance();
+	    data.result = JSON.stringify(data.attendingSessions);
+			input.sessionID = '';
+			data.sessionID = '';
+		}
+		
+		if((input.sessionIDr != '')&&(input.sessionIDr)){
+			
+			removeSession(input.sessionIDr,gs.getUserID());
+			data.attendingSessions = ses.getAttendance();
+	    data.result = JSON.stringify(data.attendingSessions);
+			input.sessionIDr = '';
+			data.sessionIDr = '';
+		}
+	
+	}
+	
+	
+	
+	
+
+})();
+
+
+function addSession(session,user){
+	var as = new GlideRecord('x_sthc_swug_19_attending_sessions')
+	as.initialize();
+	as.session = session;
+	as.user = user;
+	as.insert();
+	gs.addInfoMessage("Session has been added to your calendar")
+}
+
+function removeSession(session,user){
+
+	var as = new GlideRecord('x_sthc_swug_19_attending_sessions')
+	as.addQuery('user.sys_id',user);
+	as.addQuery('session.sys_id',session);
+	as.query();
+	while(as.next()){
+		as.deleteRecord();
+		gs.addInfoMessage("Session has been removed from your calendar")
+	}
+	
+	
+}]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>LGOMEZ</sys_created_by>
+        <sys_created_on>2018-05-13 06:11:51</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>7830d9e1db8edb4096b17d8bbf961955</sys_id>
+        <sys_mod_count>21</sys_mod_count>
+        <sys_name>SWUG MySchedule</sys_name>
+        <sys_package display_value="SWUG 19" source="x_sthc_swug_19">89eb904ddb71138040f8fcfa0c961950</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="SWUG 19">89eb904ddb71138040f8fcfa0c961950</sys_scope>
+        <sys_update_name>sp_widget_7830d9e1db8edb4096b17d8bbf961955</sys_update_name>
+        <sys_updated_by>LGOMEZ</sys_updated_by>
+        <sys_updated_on>2018-05-30 17:29:28</sys_updated_on>
+        <template><![CDATA[<div class="global">
+  
+
+  
+
+    
+
+<div class="accent-bar-container fixed">
+  <div class="global__accent-bar">
+      <span class="magenta"></span>
+      <span class="green"></span>
+      <span class="purple"></span>
+      <span class="yellow"></span>
+      <span class="blue"></span>
+  </div>
+  <div class="global__accent-bar">
+      <span class="magenta"></span>
+      <span class="green"></span>
+      <span class="purple"></span>
+      <span class="yellow"></span>
+      <span class="blue"></span>
+  </div>
+
+  </div>
+
+
+  
+<div id="leftNavigation" class="nav__container">
+  <a href="#" target="_blank"><img class="logo" src="image/hh_logo.png"></a>
+ 
+<h3>
+  <div class="date">
+      <p>
+        --------------------------------------
+   <br />
+        April 23rd • Phoenix, AZ </p>
+       </div>
+  </h3>
+ 
+         <div class="nav__menu-container">
+    
+            <div class="nav__menu-item">
+                <a class="nav__menu-link--undecorated" id="click" href="/swug19">Why Attend</a>
+            </div>
+          
+           <div class="nav__menu-item">
+                <a class="nav__menu-link--undecorated" id="click" href="/swug19?id=swug19_location">Location</a>
+            </div>
+    
+        
+            <div class="nav__menu-item">
+                <a class="nav__menu-link--undecorated" href="/swug19?id=swug_sessions">Sessions</a>
+	          </div>
+	            
+            <div class="nav__menu-item">
+                <a class="nav__menu-link--undecorated" href="/sponsors.html">Sponsors</a>
+            </div>
+          
+          <div class="nav__menu-item">
+                <a class="nav__menu-link--undecorated"  href="/swug19?id=swug_presentations">Call for presentations</a>
+            </div>
+          
+            
+            
+                  <item ng-if="data.is_logged_in == false" class="nav__menu-item">
+               <div class="nav__menu-item">
+                 <a class="nav__menu-link--undecorated" href="/swug19?id=swug_registration">Registration</a><br />
+                    </div>
+          </item>
+          
+          <item ng-if="data.is_logged_in">
+            <div class="nav__menu-item"><a class="nav__menu-link--undecorated" href="/swug19?id=swug_myschedule">My Schedule</a><br /></div>
+            <div class="nav__menu-item"><a class="nav__menu-link--undecorated" href="/logout.do">${Logout}</a></div>
+          </item>
+                
+    
+      </div>
+  </div>
+
+<div class="wrapper">
+  <div class="header">
+    <h1>
+      <b> My Schedule</b>
+    </h1>
+  </div>
+  
+</div>
+
+
+
+
+
+
+  <div ng-repeat="course in data.sessions">
+   
+  
+    
+<div ng-if="attendingThisClass(course.course_id) == false" class="sessionContainer">
+  <div class="topic">          
+{{course.topic}}
+     </div>
+<div class="hideMobile">
+  <div class="description">
+    {{course.description}}
+  </div> </div>
+     
+  <div>
+    <h4><b>Time: </b>{{course.time}} - {{course.end_time}}</h4>
+  </div>
+  
+  <div class="more">
+   <div id="overlay" ng-click="c.off()">
+  <div id="text">
+    <h3>{{c.data.topic}}</h3>
+    <h5>{{c.data.description}}</h5>
+    <h4><b>Presenting Hospital: </b>{{c.data.hospital}}</h4>
+    <h4><b>Speaker: </b>{{c.data.speaker}}</h4>
+    <h4><b>Time: </b>{{c.data.time}} - {{c.data.end_time}}</h4>
+     <h4><b>Location: </b>{{c.data.location}}</h4>
+     </div>
+</div>
+  <a ng-click="c.on(course.description,course.topic,course.hospital,course.speaker,course.time,course.end_time,course.room)">Read More Detail</a>
+
+  </div>
+
+  <div  ng-if="data.is_logged_in" class="add">
+   <a ng-if="attendingThisClass(course.course_id) == true" ng-click="c.addSession(course.course_id)">Add to my schedule <img src="emptystar.png" width="30" height="30"></a>
+   <a ng-if="attendingThisClass(course.course_id) == false"  ng-click="c.removeSession(course.course_id)">Remove from my schedule <img src="star.png" width="30" height="30"></a>
+  </div>
+  
+  <div ng-if="data.is_logged_in == false" class="add">
+   <a>Log in to add this session</a>
+  </div>
+        
+      </div>				
+    </div>
+ 
+
+
+
+</div>
+
+ ]]></template>
+    </sp_widget>
+</record_update>

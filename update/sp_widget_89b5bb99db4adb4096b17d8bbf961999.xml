@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <client_script><![CDATA[function($scope,$sce) {
+  /* widget controller */
+	  var c = this;
+
+	c.submit = function(){
+		
+	c.server.update();
+	}
+
+  
+				 
+				 
+	}
+	
+	
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>
+// COLOR BAR
+.global__accent-bar{
+  //position: fixed;
+  display:-webkit-box;display:-ms-flexbox;
+  -webkit-box-orient:horizontal;
+  -webkit-box-direction:normal;
+  -ms-flex-direction:row;
+  flex-direction:row;
+  -ms-flex-wrap:nowrap;
+  flex-wrap:nowrap;
+  -webkit-box-align:start;
+  -ms-flex-align:start;
+  align-items:flex-start;
+  overflow:hidden;
+  left:0;
+  width:100%;
+  position:absolute;
+}
+
+.global__accent-bar span{
+  display:block;
+  width:20%;
+  height:.5rem
+}
+@media (min-width:768px){
+  .global__accent-bar span{
+    height:.9rem}}
+.global__accent-bar .magenta{
+  background-color:#e62565
+}
+.global__accent-bar .green{background-color:#8ad000}
+.global__accent-bar .purple{background-color:#9a29af}
+.global__accent-bar .blue{background-color:#03a9f3}
+.global__accent-bar .yellow{background-color:#ffeb3c}
+.global__accent-bar:first-child{display:none}
+@media (min-width:1366px){
+  .global__accent-bar:first-child{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    left:-60%}}
+
+//Logo
+.logo{
+  float: left;
+  width:300px;
+  height:80px;
+  position:relative;
+  margin-top:30px;
+  margin-bottom 40px;
+
+}
+
+
+//Navigation menu
+.date{
+  text-align: center;
+}
+
+
+.nav__container{
+  //position:relative;
+  top:40px;
+  left:0;
+  width:300px;
+  height: 450px;
+  background-color:#fff;
+  z-index:20;
+  -webkit-box-shadow:0 .5rem 2.5rem .6rem rgba(0,0,0,.25);
+  box-shadow:0 .5rem 2.5rem .6rem rgba(0,0,0,.25);
+  -webkit-transition:all .25s ease;
+  transition:all .25s ease}
+
+
+
+.nav__options-container{
+  display:block;
+  position:relative;
+}
+
+
+.nav__menu-container{
+  margin-bottom:5.8rem;
+  margin-top:30px;
+  padding-left:50px;
+  padding-right:50px;
+  padding-top:30px;
+}
+
+
+.nav__menu-container .nav__menu-item{
+  border-top:.1rem solid #f2f2f2;
+  padding:.4rem 0;text-transform:uppercase}
+
+.nav__menu-container .nav__menu-link--undecorated{
+      color:gray;
+  text-decoration:none;
+  font-weight:800;
+  font-size:1.6rem}
+
+.nav__menu-container .nav__menu-link--undecorated:hover{
+  color:#000}
+
+//Button
+.btn-submit{
+	position: relative;
+	width: 170px;
+	height: 50px;
+	line-height: 50px;
+	border-radius: 30px;
+	border: 3px solid #1ECD97;
+	background-color: transparent;
+	text-align: center;
+	color: #1ECD97;
+	font-size: 1.2em;
+	transition: all .3s ease-in;
+	-webkit-transition: all .3s ease-in;
+	cursor:pointer;
+}
+.form{
+  float:right;
+  width: 50%;
+  margin-top:-400px;
+  margin-right:200px;
+}
+@media (max-width:1000px){
+  .form{
+    margin-top:50px;
+    float:none;
+    margin:auto;
+    width: 95%
+  }
+  
+  </css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>swug_register</id>
+        <internal>false</internal>
+        <link/>
+        <name>SWUG register</name>
+        <option_schema/>
+        <public>true</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+	
+data.is_logged_in = gs.getSession().isLoggedIn();
+	
+if(input){
+	
+	createUser();
+	gs.addInfoMessage("Thank you " + input.firstName + " " + input.lastName + ". You have been registered");
+	
+}
+	
+	
+	
+	
+
+})();
+
+function createUser(){
+	var us = new GlideRecord('x_sthc_swug_19_swug_users_extended');
+	us.initialize();
+	us.first_name = input.firstName;
+	us.last_name = input.lastName;
+	us.email = input.email;
+	us.mobile_phone = input.phone
+	us.hospital = input.hospital;
+	us.password_needs_reset = 'true';
+	us.user_name = input.email;
+	var user = us.insert();
+	
+	var rl = new GlideRecord('sys_user_has_role');
+	rl.initialize();
+	rl.setValue('user',user);
+	rl.setValue('role','940ba702933002009c8579b4f47ffbe2');
+	rl.insert();
+	
+}]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>LGOMEZ</sys_created_by>
+        <sys_created_on>2018-05-12 23:36:28</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>89b5bb99db4adb4096b17d8bbf961999</sys_id>
+        <sys_mod_count>62</sys_mod_count>
+        <sys_name>SWUG register</sys_name>
+        <sys_package display_value="SWUG 19" source="x_sthc_swug_19">89eb904ddb71138040f8fcfa0c961950</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="SWUG 19">89eb904ddb71138040f8fcfa0c961950</sys_scope>
+        <sys_update_name>sp_widget_89b5bb99db4adb4096b17d8bbf961999</sys_update_name>
+        <sys_updated_by>LGOMEZ</sys_updated_by>
+        <sys_updated_on>2018-05-30 22:23:31</sys_updated_on>
+        <template><![CDATA[
+  
+
+    
+
+<div class="accent-bar-container fixed">
+  <div class="global__accent-bar">
+      <span class="magenta"></span>
+      <span class="green"></span>
+      <span class="purple"></span>
+      <span class="yellow"></span>
+      <span class="blue"></span>
+  </div>
+  <div class="global__accent-bar">
+      <span class="magenta"></span>
+      <span class="green"></span>
+      <span class="purple"></span>
+      <span class="yellow"></span>
+      <span class="blue"></span>
+  </div>
+
+  </div>
+
+
+  
+<div id="leftNavigation" class="nav__container">
+  <a href="#" target="_blank"><img class="logo" src="image/hh_logo.png"></a>
+ 
+<h3>
+  <div class="date">
+      <p>
+        --------------------------------------
+   <br />
+        March 29th • Phoenix, AZ </p>
+       </div>
+  </h3>
+ 
+        <div class="nav__menu-container">
+    
+            <div class="nav__menu-item">
+                <a class="nav__menu-link--undecorated" id="click" href="swug19">Why Attend</a>
+            </div>
+          
+           <div class="nav__menu-item">
+                <a class="nav__menu-link--undecorated" id="click" href="#content">Location</a>
+            </div>
+    
+        
+            <div class="nav__menu-item">
+                <a class="nav__menu-link--undecorated" href="/swug19?id=swug_sessions">Sessions</a>
+	          </div>
+	            
+            <div class="nav__menu-item">
+                <a class="nav__menu-link--undecorated" href="/sponsors.html">Sponsors</a>
+            </div>
+          
+          <div class="nav__menu-item">
+                <a class="nav__menu-link--undecorated"  href="/swug19?id=swug_presentations">Call for presentations</a>
+            </div>
+          
+            
+            <div class="nav__menu-item">
+                  <item ng-if="data.is_logged_in == false" class="nav__menu-item">
+                <a class="nav__menu-link--undecorated" href="/swug19?id=swug_registration">Registration</a><br />
+          </item>
+          <item ng-if="data.is_logged_in" class="nav__menu-item">
+                <a class="nav__menu-link--undecorated" href="/swug19?id=swug_myschedule">My Schedule</a><br />
+                <a class="nav__menu-link--undecorated" href="/logout.do">${Logout}</a>
+          </item>
+                
+          </div>
+      </div>
+  </div>
+
+
+ 
+    <form class="form-horizontal form">
+<fieldset>
+
+<!-- Form Name -->
+<legend>SoutWest User Group Registration</legend>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="control-label" for="firstName">First Name</label>  
+  <input ng-model="data.firstName" id="firstName" name="firstName" type="text" placeholder="First Name" class="form-control input-md" required="">
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="control-label" for="lastName">Last Name</label>  
+  <input ng-model="data.lastName" id="lastName" name="lastName" type="text" placeholder="Last Name" class="form-control input-md">
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="control-label" for="email">E-mail</label>  
+  <input ng-model="data.email" id="email" name="email" type="text" placeholder="E-mail" class="form-control input-md">
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="control-label" for="phone">Phone Number</label>  
+  <input ng-model="data.phone" id="phone" name="phone" type="text" placeholder="Phone Number" class="form-control input-md">
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="control-label" for="hospital">Hospital/Company</label>  
+  <input ng-model="data.hospital" id="hospital" name="hospital" type="text" placeholder="Hospital/Company" class="form-control input-md">
+</div>
+  
+    <!-- Select Basic -->
+  <div class="form-group">
+  <label class="control-label" for="role">Role</label>
+    <select ng-model="data.role" id="role" name="role" class="form-control">
+      <option value="1">Analyst</option>
+      <option value="2">Application Manager</option>
+      <option value="3">Clinical Staff</option>
+      <option value="4">Executive</option>
+      <option value="5">Informatics</option>
+      <option value="6">Infrastructure</option>
+      <option value="7">Instructional Designer</option>
+      <option value="8">Project Manager</option>
+    </select>
+</div>
+  
+  <!-- Select Multiple -->
+<div class="form-group">
+  <label class="control-label" for="selectmultiple">Area of Interest (Hold 'CTRL' to select multple)</label>
+    <select size="8" ng-model="data.app" id="app" name="app" class="form-control" multiple="multiple">
+      <option value="1">ADT</option>
+      <option value="2">Ambulatory</option>
+      <option value="3">ASAP</option>
+      <option value="4">Beaker</option>
+      <option value="5">Canto & Haiku</option>
+      <option value="6">HIM</option>
+      <option value="7">HomeHealth</option>
+      <option value="8">Infrastructure</option>
+      <option value="9">Inpatient</option>
+      <option value="10">Interfaces</option>
+      <option value="11">Meaningful Use</option>
+      <option value="12">MyChart</option>
+      <option value="13">Optime</option>
+      <option value="14">Orders</option>
+      <option value="15">Physicians</option>
+      <option value="16">Process Improvement</option>
+      <option value="17">Radiant</option>
+      <option value="18">Reporting</option>
+      <option value="19">Rover</option>
+      <option value="20">Security</option>
+      <option value="21">Stork</option>
+      <option value="22">Training</option>
+      <option value="23">Willow</option>
+      <option value="24">Wisdom</option>
+      
+      
+    </select>
+</div>
+  
+  
+ 
+  <!-- Select Basic -->
+  <div class="form-group">
+  <label class="control-label" for="diet">Dietary Needs</label>
+    <select ng-model="data.diet" id="diet" name="diet" class="form-control">
+      <option value="1">No Restriction</option>
+      <option value="2">Gluten Free</option>
+      <option value="3">Vegan</option>
+      <option value="4">Vegetarian</option>
+    </select>
+</div>
+
+
+</fieldset>
+      
+      <button class="btn-submit" ng-click="c.submit()">
+        Submit
+      </button>
+</form>
+
+    
+    
+
+
+
+
+ ]]></template>
+    </sp_widget>
+</record_update>

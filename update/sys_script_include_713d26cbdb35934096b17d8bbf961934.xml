@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_sthc_swug_19.SessionUtil</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>SessionUtil</name>
+        <script><![CDATA[var SessionUtil = Class.create();
+SessionUtil.prototype = {
+    initialize: function() {
+    },
+	
+	getList: function (){
+		
+		// retrieve course catalog list including validating security and course access.
+		var currentUser = gs.getUser();
+		var courses = [];
+		var grCourses = new GlideRecord('x_sthc_swug_19_swug19_sessions');
+		grCourses.orderBy('time');
+		grCourses.query();
+
+		while (grCourses.next()) {
+			var course = {};
+			
+			
+			course.course_id = grCourses.getUniqueValue();
+			
+			course.topic = grCourses.getDisplayValue('topic');
+			course.description = grCourses.getValue('abstract');
+			course.room = grCourses.getDisplayValue('room');
+			course.hospital = grCourses.getDisplayValue('presenting_hospital');
+			course.speaker = grCourses.getDisplayValue('speaker');
+			course.time = getTime(grCourses.getDisplayValue('time'));
+			course.end_time = getTime(grCourses.getDisplayValue('end_time'));
+		
+			
+		courses.push(course);
+		}
+		return (courses);
+	},
+	
+
+	getAttendance: function (){
+		
+		// retrieve course catalog list including validating security and course access.
+		var currentUser = gs.getUserID();
+		var attSessions = [];
+		var gr = new GlideRecord('x_sthc_swug_19_attending_sessions');
+		gr.addQuery('user',currentUser);
+		gr.query();
+
+		while (gr.next()) {
+			var aSession = {};
+			
+			aSession.course_id = getSessionID(gr.session.sys_id);
+	
+			
+		attSessions.push(aSession);
+		}
+		return (attSessions);
+	},
+		
+	
+	
+	
+    type: 'SessionUtil'
+};
+
+function getTime(fullTime){
+	if(fullTime){
+	var time = fullTime.split(' ');
+	var time2 = time[1].split(':');
+	return time2[0] + ":" + time2[1];
+	}
+	else
+		return;
+}
+
+function getSessionID(ID){
+	var sid = new GlideRecord('x_sthc_swug_19_swug19_sessions');
+	sid.addQuery('sys_id',ID);
+	sid.query();
+	while(sid.next()){
+		return sid.getUniqueValue();
+	}
+	
+}
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>LGOMEZ</sys_created_by>
+        <sys_created_on>2018-05-05 18:33:26</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>713d26cbdb35934096b17d8bbf961934</sys_id>
+        <sys_mod_count>39</sys_mod_count>
+        <sys_name>SessionUtil</sys_name>
+        <sys_package display_value="SWUG 19" source="x_sthc_swug_19">89eb904ddb71138040f8fcfa0c961950</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="SWUG 19">89eb904ddb71138040f8fcfa0c961950</sys_scope>
+        <sys_update_name>sys_script_include_713d26cbdb35934096b17d8bbf961934</sys_update_name>
+        <sys_updated_by>LGOMEZ</sys_updated_by>
+        <sys_updated_on>2018-05-12 20:13:36</sys_updated_on>
+    </sys_script_include>
+</record_update>
