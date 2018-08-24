@@ -406,7 +406,7 @@ function logUserOut(sessionID){
         <sys_created_on>2018-04-29 03:06:58</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>e68f1c89db35138040f8fcfa0c96191c</sys_id>
-        <sys_mod_count>590</sys_mod_count>
+        <sys_mod_count>591</sys_mod_count>
         <sys_name>swug login</sys_name>
         <sys_package display_value="SWUG 19" source="x_sthc_swug_19">89eb904ddb71138040f8fcfa0c961950</sys_package>
         <sys_policy/>
@@ -414,7 +414,7 @@ function logUserOut(sessionID){
         <sys_scope display_value="SWUG 19">89eb904ddb71138040f8fcfa0c961950</sys_scope>
         <sys_update_name>sp_widget_e68f1c89db35138040f8fcfa0c96191c</sys_update_name>
         <sys_updated_by>LGOMEZ</sys_updated_by>
-        <sys_updated_on>2018-08-17 20:36:39</sys_updated_on>
+        <sys_updated_on>2018-08-24 23:18:31</sys_updated_on>
         <template><![CDATA[<html>
   <body>
     
@@ -497,7 +497,7 @@ function logUserOut(sessionID){
       </div>
   </div>
     
-    <!-- Login -->
+    <!-- Login 
     <div class="login" ng-if="!data.is_logged_in">
       
    
@@ -524,12 +524,6 @@ function logUserOut(sessionID){
 				<div ng-if="c.message" class="alert alert-danger" role="alert">{{c.message}}</div>
 				<div ng-if="c.success" class="alert alert-success" role="alert">{{c.success}}</div>
 
-				<!--<div ng-if="!c.data.forgetMe" class="checkbox">
-          <label>
-            <input name="c.remember_me" ng-model="c.remember_me" checked="checked" id="remember_me" type="checkbox" class="checkbox" value="true"/> ${Remember me}
-					</label>
-				</div>
--->
         <div>
           <a href="#"> forgot my password</a>
         </div>
@@ -570,7 +564,7 @@ function logUserOut(sessionID){
 	</form>
 </div>
      </div>
-    <!-- End Login -->
+    -->
     
     
     
