@@ -5,13 +5,13 @@
             <element>user_name</element>
             <position>0</position>
             <sys_created_by>LGOMEZ</sys_created_by>
-            <sys_created_on>2018-05-13 00:06:45</sys_created_on>
-            <sys_id>6cacb315db8adb4096b17d8bbf9619f7</sys_id>
+            <sys_created_on>2018-07-06 21:54:40</sys_created_on>
+            <sys_id>79dda2cfdb839f0040f8fcfa0c9619a7</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">a0acb315db8adb4096b17d8bbf9619f7</sys_ui_section>
             <sys_updated_by>LGOMEZ</sys_updated_by>
-            <sys_updated_on>2018-05-13 00:06:45</sys_updated_on>
+            <sys_updated_on>2018-07-06 21:54:40</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -19,41 +19,41 @@
             <element>user_password</element>
             <position>1</position>
             <sys_created_by>LGOMEZ</sys_created_by>
-            <sys_created_on>2018-05-13 00:06:45</sys_created_on>
-            <sys_id>ecacb315db8adb4096b17d8bbf9619fb</sys_id>
+            <sys_created_on>2018-07-06 21:54:40</sys_created_on>
+            <sys_id>f9dda2cfdb839f0040f8fcfa0c9619a7</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">a0acb315db8adb4096b17d8bbf9619f7</sys_ui_section>
             <sys_updated_by>LGOMEZ</sys_updated_by>
-            <sys_updated_on>2018-05-13 00:06:45</sys_updated_on>
+            <sys_updated_on>2018-07-06 21:54:40</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>name</element>
+            <position>2</position>
+            <sys_created_by>LGOMEZ</sys_created_by>
+            <sys_created_on>2018-07-06 21:54:40</sys_created_on>
+            <sys_id>7ddda2cfdb839f0040f8fcfa0c9619a7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">a0acb315db8adb4096b17d8bbf9619f7</sys_ui_section>
+            <sys_updated_by>LGOMEZ</sys_updated_by>
+            <sys_updated_on>2018-07-06 21:54:40</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>first_name</element>
-            <position>2</position>
-            <sys_created_by>LGOMEZ</sys_created_by>
-            <sys_created_on>2018-05-13 00:06:45</sys_created_on>
-            <sys_id>e4acb315db8adb4096b17d8bbf9619f9</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">a0acb315db8adb4096b17d8bbf9619f7</sys_ui_section>
-            <sys_updated_by>LGOMEZ</sys_updated_by>
-            <sys_updated_on>2018-05-13 00:06:45</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>middle_name</element>
             <position>3</position>
             <sys_created_by>LGOMEZ</sys_created_by>
-            <sys_created_on>2018-05-13 00:06:45</sys_created_on>
-            <sys_id>6cacb315db8adb4096b17d8bbf9619fc</sys_id>
+            <sys_created_on>2018-07-06 21:54:40</sys_created_on>
+            <sys_id>fddda2cfdb839f0040f8fcfa0c9619a7</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">a0acb315db8adb4096b17d8bbf9619f7</sys_ui_section>
             <sys_updated_by>LGOMEZ</sys_updated_by>
-            <sys_updated_on>2018-05-13 00:06:45</sys_updated_on>
+            <sys_updated_on>2018-07-06 21:54:40</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -61,41 +61,41 @@
             <element>last_name</element>
             <position>4</position>
             <sys_created_by>LGOMEZ</sys_created_by>
-            <sys_created_on>2018-05-13 00:06:45</sys_created_on>
-            <sys_id>64acb315db8adb4096b17d8bbf9619fa</sys_id>
+            <sys_created_on>2018-07-06 21:54:40</sys_created_on>
+            <sys_id>71dda2cfdb839f0040f8fcfa0c9619a8</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">a0acb315db8adb4096b17d8bbf9619f7</sys_ui_section>
             <sys_updated_by>LGOMEZ</sys_updated_by>
-            <sys_updated_on>2018-05-13 00:06:45</sys_updated_on>
+            <sys_updated_on>2018-07-06 21:54:40</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>phone</element>
+            <element>.split</element>
             <position>5</position>
             <sys_created_by>LGOMEZ</sys_created_by>
-            <sys_created_on>2018-05-13 00:06:45</sys_created_on>
-            <sys_id>e8acb315db8adb4096b17d8bbf9619fd</sys_id>
+            <sys_created_on>2018-07-06 21:54:40</sys_created_on>
+            <sys_id>f1dda2cfdb839f0040f8fcfa0c9619a8</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">a0acb315db8adb4096b17d8bbf9619f7</sys_ui_section>
             <sys_updated_by>LGOMEZ</sys_updated_by>
-            <sys_updated_on>2018-05-13 00:06:45</sys_updated_on>
+            <sys_updated_on>2018-07-06 21:54:40</sys_updated_on>
             <sys_user/>
-            <type/>
+            <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>u_phone_extension</element>
+            <element>email</element>
             <position>6</position>
             <sys_created_by>LGOMEZ</sys_created_by>
-            <sys_created_on>2018-05-13 00:06:45</sys_created_on>
-            <sys_id>ecacb315db8adb4096b17d8bbf9619f7</sys_id>
+            <sys_created_on>2018-07-06 21:54:40</sys_created_on>
+            <sys_id>75dda2cfdb839f0040f8fcfa0c9619a8</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">a0acb315db8adb4096b17d8bbf9619f7</sys_ui_section>
             <sys_updated_by>LGOMEZ</sys_updated_by>
-            <sys_updated_on>2018-05-13 00:06:45</sys_updated_on>
+            <sys_updated_on>2018-07-06 21:54:40</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -103,41 +103,41 @@
             <element>mobile_phone</element>
             <position>7</position>
             <sys_created_by>LGOMEZ</sys_created_by>
-            <sys_created_on>2018-05-13 00:06:45</sys_created_on>
-            <sys_id>e0acb315db8adb4096b17d8bbf9619fb</sys_id>
+            <sys_created_on>2018-07-06 21:54:40</sys_created_on>
+            <sys_id>f5dda2cfdb839f0040f8fcfa0c9619a8</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">a0acb315db8adb4096b17d8bbf9619f7</sys_ui_section>
             <sys_updated_by>LGOMEZ</sys_updated_by>
-            <sys_updated_on>2018-05-13 00:06:45</sys_updated_on>
+            <sys_updated_on>2018-07-06 21:54:40</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>email</element>
+            <element>swug_role</element>
             <position>8</position>
             <sys_created_by>LGOMEZ</sys_created_by>
-            <sys_created_on>2018-05-13 00:06:45</sys_created_on>
-            <sys_id>e8acb315db8adb4096b17d8bbf9619f8</sys_id>
+            <sys_created_on>2018-07-06 21:54:40</sys_created_on>
+            <sys_id>79dda2cfdb839f0040f8fcfa0c9619a8</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">a0acb315db8adb4096b17d8bbf9619f7</sys_ui_section>
             <sys_updated_by>LGOMEZ</sys_updated_by>
-            <sys_updated_on>2018-05-13 00:06:45</sys_updated_on>
+            <sys_updated_on>2018-07-06 21:54:40</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>location</element>
+            <element>hospital</element>
             <position>9</position>
             <sys_created_by>LGOMEZ</sys_created_by>
-            <sys_created_on>2018-05-13 00:06:45</sys_created_on>
-            <sys_id>60acb315db8adb4096b17d8bbf9619fc</sys_id>
+            <sys_created_on>2018-07-06 21:54:40</sys_created_on>
+            <sys_id>f9dda2cfdb839f0040f8fcfa0c9619a8</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">a0acb315db8adb4096b17d8bbf9619f7</sys_ui_section>
             <sys_updated_by>LGOMEZ</sys_updated_by>
-            <sys_updated_on>2018-05-13 00:06:45</sys_updated_on>
+            <sys_updated_on>2018-07-06 21:54:40</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -145,601 +145,27 @@
             <element>password_needs_reset</element>
             <position>10</position>
             <sys_created_by>LGOMEZ</sys_created_by>
-            <sys_created_on>2018-05-13 00:06:45</sys_created_on>
-            <sys_id>68acb315db8adb4096b17d8bbf9619f9</sys_id>
+            <sys_created_on>2018-07-06 21:54:40</sys_created_on>
+            <sys_id>7ddda2cfdb839f0040f8fcfa0c9619a8</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">a0acb315db8adb4096b17d8bbf9619f7</sys_ui_section>
             <sys_updated_by>LGOMEZ</sys_updated_by>
-            <sys_updated_on>2018-05-13 00:06:45</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>locked_out</element>
-            <position>11</position>
-            <sys_created_by>LGOMEZ</sys_created_by>
-            <sys_created_on>2018-05-13 00:06:45</sys_created_on>
-            <sys_id>ecacb315db8adb4096b17d8bbf9619fc</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">a0acb315db8adb4096b17d8bbf9619f7</sys_ui_section>
-            <sys_updated_by>LGOMEZ</sys_updated_by>
-            <sys_updated_on>2018-05-13 00:06:45</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>active</element>
-            <position>12</position>
-            <sys_created_by>LGOMEZ</sys_created_by>
-            <sys_created_on>2018-05-13 00:06:45</sys_created_on>
-            <sys_id>e4acb315db8adb4096b17d8bbf9619fa</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">a0acb315db8adb4096b17d8bbf9619f7</sys_ui_section>
-            <sys_updated_by>LGOMEZ</sys_updated_by>
-            <sys_updated_on>2018-05-13 00:06:45</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>sys_created_on</element>
-            <position>13</position>
-            <sys_created_by>LGOMEZ</sys_created_by>
-            <sys_created_on>2018-05-13 00:06:45</sys_created_on>
-            <sys_id>6cacb315db8adb4096b17d8bbf9619fd</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">a0acb315db8adb4096b17d8bbf9619f7</sys_ui_section>
-            <sys_updated_by>LGOMEZ</sys_updated_by>
-            <sys_updated_on>2018-05-13 00:06:45</sys_updated_on>
+            <sys_updated_on>2018-07-06 21:54:40</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>last_login_time</element>
-            <position>14</position>
+            <position>11</position>
             <sys_created_by>LGOMEZ</sys_created_by>
-            <sys_created_on>2018-05-13 00:06:45</sys_created_on>
-            <sys_id>60acb315db8adb4096b17d8bbf9619f8</sys_id>
+            <sys_created_on>2018-07-06 21:54:40</sys_created_on>
+            <sys_id>fddda2cfdb839f0040f8fcfa0c9619a8</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">a0acb315db8adb4096b17d8bbf9619f7</sys_ui_section>
             <sys_updated_by>LGOMEZ</sys_updated_by>
-            <sys_updated_on>2018-05-13 00:06:45</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>u_account_expires</element>
-            <position>15</position>
-            <sys_created_by>LGOMEZ</sys_created_by>
-            <sys_created_on>2018-05-13 00:06:45</sys_created_on>
-            <sys_id>64acb315db8adb4096b17d8bbf9619fb</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">a0acb315db8adb4096b17d8bbf9619f7</sys_ui_section>
-            <sys_updated_by>LGOMEZ</sys_updated_by>
-            <sys_updated_on>2018-05-13 00:06:45</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>failed_attempts</element>
-            <position>16</position>
-            <sys_created_by>LGOMEZ</sys_created_by>
-            <sys_created_on>2018-05-13 00:06:45</sys_created_on>
-            <sys_id>6cacb315db8adb4096b17d8bbf9619f8</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">a0acb315db8adb4096b17d8bbf9619f7</sys_ui_section>
-            <sys_updated_by>LGOMEZ</sys_updated_by>
-            <sys_updated_on>2018-05-13 00:06:45</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>web_service_access_only</element>
-            <position>17</position>
-            <sys_created_by>LGOMEZ</sys_created_by>
-            <sys_created_on>2018-05-13 00:06:45</sys_created_on>
-            <sys_id>e0acb315db8adb4096b17d8bbf9619fc</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">a0acb315db8adb4096b17d8bbf9619f7</sys_ui_section>
-            <sys_updated_by>LGOMEZ</sys_updated_by>
-            <sys_updated_on>2018-05-13 00:06:45</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>photo</element>
-            <position>18</position>
-            <sys_created_by>LGOMEZ</sys_created_by>
-            <sys_created_on>2018-05-13 00:06:45</sys_created_on>
-            <sys_id>e8acb315db8adb4096b17d8bbf9619f9</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">a0acb315db8adb4096b17d8bbf9619f7</sys_ui_section>
-            <sys_updated_by>LGOMEZ</sys_updated_by>
-            <sys_updated_on>2018-05-13 00:06:45</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>u_system_access_codes</element>
-            <position>19</position>
-            <sys_created_by>LGOMEZ</sys_created_by>
-            <sys_created_on>2018-05-13 00:06:45</sys_created_on>
-            <sys_id>60acb315db8adb4096b17d8bbf9619fd</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">a0acb315db8adb4096b17d8bbf9619f7</sys_ui_section>
-            <sys_updated_by>LGOMEZ</sys_updated_by>
-            <sys_updated_on>2018-05-13 00:06:45</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>.split</element>
-            <position>20</position>
-            <sys_created_by>LGOMEZ</sys_created_by>
-            <sys_created_on>2018-05-13 00:06:45</sys_created_on>
-            <sys_id>68acb315db8adb4096b17d8bbf9619fa</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">a0acb315db8adb4096b17d8bbf9619f7</sys_ui_section>
-            <sys_updated_by>LGOMEZ</sys_updated_by>
-            <sys_updated_on>2018-05-13 00:06:45</sys_updated_on>
-            <sys_user/>
-            <type>.split</type>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>u_customer_type</element>
-            <position>21</position>
-            <sys_created_by>LGOMEZ</sys_created_by>
-            <sys_created_on>2018-05-13 00:06:45</sys_created_on>
-            <sys_id>ecacb315db8adb4096b17d8bbf9619fd</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">a0acb315db8adb4096b17d8bbf9619f7</sys_ui_section>
-            <sys_updated_by>LGOMEZ</sys_updated_by>
-            <sys_updated_on>2018-05-13 00:06:45</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>u_date_of_birth__mm_dd_</element>
-            <position>22</position>
-            <sys_created_by>LGOMEZ</sys_created_by>
-            <sys_created_on>2018-05-13 00:06:45</sys_created_on>
-            <sys_id>e0acb315db8adb4096b17d8bbf9619f8</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">a0acb315db8adb4096b17d8bbf9619f7</sys_ui_section>
-            <sys_updated_by>LGOMEZ</sys_updated_by>
-            <sys_updated_on>2018-05-13 00:06:45</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>employee_number</element>
-            <position>23</position>
-            <sys_created_by>LGOMEZ</sys_created_by>
-            <sys_created_on>2018-05-13 00:06:45</sys_created_on>
-            <sys_id>e4acb315db8adb4096b17d8bbf9619fb</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">a0acb315db8adb4096b17d8bbf9619f7</sys_ui_section>
-            <sys_updated_by>LGOMEZ</sys_updated_by>
-            <sys_updated_on>2018-05-13 00:06:45</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>u_med_staff_id</element>
-            <position>24</position>
-            <sys_created_by>LGOMEZ</sys_created_by>
-            <sys_created_on>2018-05-13 00:06:45</sys_created_on>
-            <sys_id>ecacb315db8adb4096b17d8bbf9619f8</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">a0acb315db8adb4096b17d8bbf9619f7</sys_ui_section>
-            <sys_updated_by>LGOMEZ</sys_updated_by>
-            <sys_updated_on>2018-05-13 00:06:45</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>title</element>
-            <position>25</position>
-            <sys_created_by>LGOMEZ</sys_created_by>
-            <sys_created_on>2018-05-13 00:06:45</sys_created_on>
-            <sys_id>64acb315db8adb4096b17d8bbf9619fc</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">a0acb315db8adb4096b17d8bbf9619f7</sys_ui_section>
-            <sys_updated_by>LGOMEZ</sys_updated_by>
-            <sys_updated_on>2018-05-13 00:06:45</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>title.u_job_code</element>
-            <position>26</position>
-            <sys_created_by>LGOMEZ</sys_created_by>
-            <sys_created_on>2018-05-13 00:06:45</sys_created_on>
-            <sys_id>6cacb315db8adb4096b17d8bbf9619f9</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">a0acb315db8adb4096b17d8bbf9619f7</sys_ui_section>
-            <sys_updated_by>LGOMEZ</sys_updated_by>
-            <sys_updated_on>2018-05-13 00:06:45</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>department</element>
-            <position>27</position>
-            <sys_created_by>LGOMEZ</sys_created_by>
-            <sys_created_on>2018-05-13 00:06:45</sys_created_on>
-            <sys_id>e0acb315db8adb4096b17d8bbf9619fd</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">a0acb315db8adb4096b17d8bbf9619f7</sys_ui_section>
-            <sys_updated_by>LGOMEZ</sys_updated_by>
-            <sys_updated_on>2018-05-13 00:06:45</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>cost_center</element>
-            <position>28</position>
-            <sys_created_by>LGOMEZ</sys_created_by>
-            <sys_created_on>2018-05-13 00:06:45</sys_created_on>
-            <sys_id>e8acb315db8adb4096b17d8bbf9619fa</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">a0acb315db8adb4096b17d8bbf9619f7</sys_ui_section>
-            <sys_updated_by>LGOMEZ</sys_updated_by>
-            <sys_updated_on>2018-05-13 00:06:45</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>manager</element>
-            <position>29</position>
-            <sys_created_by>LGOMEZ</sys_created_by>
-            <sys_created_on>2018-05-13 00:06:45</sys_created_on>
-            <sys_id>60acb315db8adb4096b17d8bbf9619fe</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">a0acb315db8adb4096b17d8bbf9619f7</sys_ui_section>
-            <sys_updated_by>LGOMEZ</sys_updated_by>
-            <sys_updated_on>2018-05-13 00:06:45</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>u_change_control_approver</element>
-            <position>30</position>
-            <sys_created_by>LGOMEZ</sys_created_by>
-            <sys_created_on>2018-05-13 00:06:45</sys_created_on>
-            <sys_id>64acb315db8adb4096b17d8bbf9619f8</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">a0acb315db8adb4096b17d8bbf9619f7</sys_ui_section>
-            <sys_updated_by>LGOMEZ</sys_updated_by>
-            <sys_updated_on>2018-05-13 00:06:45</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>u_time_card_user</element>
-            <position>31</position>
-            <sys_created_by>LGOMEZ</sys_created_by>
-            <sys_created_on>2018-05-13 00:06:45</sys_created_on>
-            <sys_id>68acb315db8adb4096b17d8bbf9619fb</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">a0acb315db8adb4096b17d8bbf9619f7</sys_ui_section>
-            <sys_updated_by>LGOMEZ</sys_updated_by>
-            <sys_updated_on>2018-05-13 00:06:45</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>u_vp</element>
-            <position>32</position>
-            <sys_created_by>LGOMEZ</sys_created_by>
-            <sys_created_on>2018-05-13 00:06:45</sys_created_on>
-            <sys_id>60acb315db8adb4096b17d8bbf9619f9</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">a0acb315db8adb4096b17d8bbf9619f7</sys_ui_section>
-            <sys_updated_by>LGOMEZ</sys_updated_by>
-            <sys_updated_on>2018-05-13 00:06:45</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>vip</element>
-            <position>33</position>
-            <sys_created_by>LGOMEZ</sys_created_by>
-            <sys_created_on>2018-05-13 00:06:45</sys_created_on>
-            <sys_id>e4acb315db8adb4096b17d8bbf9619fc</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">a0acb315db8adb4096b17d8bbf9619f7</sys_ui_section>
-            <sys_updated_by>LGOMEZ</sys_updated_by>
-            <sys_updated_on>2018-05-13 00:06:45</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>u_approver</element>
-            <position>34</position>
-            <sys_created_by>LGOMEZ</sys_created_by>
-            <sys_created_on>2018-05-13 00:06:45</sys_created_on>
-            <sys_id>ecacb315db8adb4096b17d8bbf9619f9</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">a0acb315db8adb4096b17d8bbf9619f7</sys_ui_section>
-            <sys_updated_by>LGOMEZ</sys_updated_by>
-            <sys_updated_on>2018-05-13 00:06:45</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>u_erp_approver</element>
-            <position>35</position>
-            <sys_created_by>LGOMEZ</sys_created_by>
-            <sys_created_on>2018-05-13 00:06:45</sys_created_on>
-            <sys_id>64acb315db8adb4096b17d8bbf9619fd</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">a0acb315db8adb4096b17d8bbf9619f7</sys_ui_section>
-            <sys_updated_by>LGOMEZ</sys_updated_by>
-            <sys_updated_on>2018-05-13 00:06:45</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>u_roll_up_manager</element>
-            <position>36</position>
-            <sys_created_by>LGOMEZ</sys_created_by>
-            <sys_created_on>2018-05-13 00:06:45</sys_created_on>
-            <sys_id>6cacb315db8adb4096b17d8bbf9619fa</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">a0acb315db8adb4096b17d8bbf9619f7</sys_ui_section>
-            <sys_updated_by>LGOMEZ</sys_updated_by>
-            <sys_updated_on>2018-05-13 00:06:45</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>notification</element>
-            <position>37</position>
-            <sys_created_by>LGOMEZ</sys_created_by>
-            <sys_created_on>2018-05-13 00:06:45</sys_created_on>
-            <sys_id>e0acb315db8adb4096b17d8bbf9619fe</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">a0acb315db8adb4096b17d8bbf9619f7</sys_ui_section>
-            <sys_updated_by>LGOMEZ</sys_updated_by>
-            <sys_updated_on>2018-05-13 00:06:45</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>time_zone</element>
-            <position>38</position>
-            <sys_created_by>LGOMEZ</sys_created_by>
-            <sys_created_on>2018-05-13 00:06:45</sys_created_on>
-            <sys_id>e4acb315db8adb4096b17d8bbf9619f8</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">a0acb315db8adb4096b17d8bbf9619f7</sys_ui_section>
-            <sys_updated_by>LGOMEZ</sys_updated_by>
-            <sys_updated_on>2018-05-13 00:06:45</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>date_format</element>
-            <position>39</position>
-            <sys_created_by>LGOMEZ</sys_created_by>
-            <sys_created_on>2018-05-13 00:06:45</sys_created_on>
-            <sys_id>e8acb315db8adb4096b17d8bbf9619fb</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">a0acb315db8adb4096b17d8bbf9619f7</sys_ui_section>
-            <sys_updated_by>LGOMEZ</sys_updated_by>
-            <sys_updated_on>2018-05-13 00:06:45</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>name</element>
-            <position>40</position>
-            <sys_created_by>LGOMEZ</sys_created_by>
-            <sys_created_on>2018-05-13 00:06:45</sys_created_on>
-            <sys_id>e0acb315db8adb4096b17d8bbf9619f9</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">a0acb315db8adb4096b17d8bbf9619f7</sys_ui_section>
-            <sys_updated_by>LGOMEZ</sys_updated_by>
-            <sys_updated_on>2018-05-13 00:06:45</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>schedule</element>
-            <position>41</position>
-            <sys_created_by>LGOMEZ</sys_created_by>
-            <sys_created_on>2018-05-13 00:06:45</sys_created_on>
-            <sys_id>68acb315db8adb4096b17d8bbf9619fc</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">a0acb315db8adb4096b17d8bbf9619f7</sys_ui_section>
-            <sys_updated_by>LGOMEZ</sys_updated_by>
-            <sys_updated_on>2018-05-13 00:06:45</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>ldap_server</element>
-            <position>42</position>
-            <sys_created_by>LGOMEZ</sys_created_by>
-            <sys_created_on>2018-05-13 00:06:45</sys_created_on>
-            <sys_id>60acb315db8adb4096b17d8bbf9619fa</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">a0acb315db8adb4096b17d8bbf9619f7</sys_ui_section>
-            <sys_updated_by>LGOMEZ</sys_updated_by>
-            <sys_updated_on>2018-05-13 00:06:45</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>source</element>
-            <position>43</position>
-            <sys_created_by>LGOMEZ</sys_created_by>
-            <sys_created_on>2018-05-13 00:06:45</sys_created_on>
-            <sys_id>e4acb315db8adb4096b17d8bbf9619fd</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">a0acb315db8adb4096b17d8bbf9619f7</sys_ui_section>
-            <sys_updated_by>LGOMEZ</sys_updated_by>
-            <sys_updated_on>2018-05-13 00:06:45</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>u_objectguid</element>
-            <position>44</position>
-            <sys_created_by>LGOMEZ</sys_created_by>
-            <sys_created_on>2018-05-13 00:06:45</sys_created_on>
-            <sys_id>ecacb315db8adb4096b17d8bbf9619fa</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">a0acb315db8adb4096b17d8bbf9619f7</sys_ui_section>
-            <sys_updated_by>LGOMEZ</sys_updated_by>
-            <sys_updated_on>2018-05-13 00:06:45</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>u_additional_info</element>
-            <position>45</position>
-            <sys_created_by>LGOMEZ</sys_created_by>
-            <sys_created_on>2018-05-13 00:06:45</sys_created_on>
-            <sys_id>64acb315db8adb4096b17d8bbf9619fe</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">a0acb315db8adb4096b17d8bbf9619f7</sys_ui_section>
-            <sys_updated_by>LGOMEZ</sys_updated_by>
-            <sys_updated_on>2018-05-13 00:06:45</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>.end_split</element>
-            <position>46</position>
-            <sys_created_by>LGOMEZ</sys_created_by>
-            <sys_created_on>2018-05-13 00:06:45</sys_created_on>
-            <sys_id>68acb315db8adb4096b17d8bbf9619f8</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">a0acb315db8adb4096b17d8bbf9619f7</sys_ui_section>
-            <sys_updated_by>LGOMEZ</sys_updated_by>
-            <sys_updated_on>2018-05-13 00:06:45</sys_updated_on>
-            <sys_user/>
-            <type>.end_split</type>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>u_last_refreshed</element>
-            <position>47</position>
-            <sys_created_by>LGOMEZ</sys_created_by>
-            <sys_created_on>2018-05-13 00:06:45</sys_created_on>
-            <sys_id>6cacb315db8adb4096b17d8bbf9619fb</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">a0acb315db8adb4096b17d8bbf9619f7</sys_ui_section>
-            <sys_updated_by>LGOMEZ</sys_updated_by>
-            <sys_updated_on>2018-05-13 00:06:45</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>u_oncall_phone</element>
-            <position>48</position>
-            <sys_created_by>LGOMEZ</sys_created_by>
-            <sys_created_on>2018-05-13 00:06:45</sys_created_on>
-            <sys_id>64acb315db8adb4096b17d8bbf9619f9</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">a0acb315db8adb4096b17d8bbf9619f7</sys_ui_section>
-            <sys_updated_by>LGOMEZ</sys_updated_by>
-            <sys_updated_on>2018-05-13 00:06:45</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>12M.sys_user.u_oncall_phone.u_resource</element>
-            <position>49</position>
-            <sys_created_by>LGOMEZ</sys_created_by>
-            <sys_created_on>2018-05-13 00:06:45</sys_created_on>
-            <sys_id>e8acb315db8adb4096b17d8bbf9619fc</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">a0acb315db8adb4096b17d8bbf9619f7</sys_ui_section>
-            <sys_updated_by>LGOMEZ</sys_updated_by>
-            <sys_updated_on>2018-05-13 00:06:45</sys_updated_on>
-            <sys_user/>
-            <type>list</type>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>u_downtime_object_guid</element>
-            <position>50</position>
-            <sys_created_by>LGOMEZ</sys_created_by>
-            <sys_created_on>2018-05-13 00:06:45</sys_created_on>
-            <sys_id>e0acb315db8adb4096b17d8bbf9619fa</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">a0acb315db8adb4096b17d8bbf9619f7</sys_ui_section>
-            <sys_updated_by>LGOMEZ</sys_updated_by>
-            <sys_updated_on>2018-05-13 00:06:45</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>u_downtime_source</element>
-            <position>51</position>
-            <sys_created_by>LGOMEZ</sys_created_by>
-            <sys_created_on>2018-05-13 00:06:45</sys_created_on>
-            <sys_id>68acb315db8adb4096b17d8bbf9619fd</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">a0acb315db8adb4096b17d8bbf9619f7</sys_ui_section>
-            <sys_updated_by>LGOMEZ</sys_updated_by>
-            <sys_updated_on>2018-05-13 00:06:45</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>country</element>
-            <position>52</position>
-            <sys_created_by>LGOMEZ</sys_created_by>
-            <sys_created_on>2018-05-13 00:06:45</sys_created_on>
-            <sys_id>60acb315db8adb4096b17d8bbf9619fb</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">a0acb315db8adb4096b17d8bbf9619f7</sys_ui_section>
-            <sys_updated_by>LGOMEZ</sys_updated_by>
-            <sys_updated_on>2018-05-13 00:06:45</sys_updated_on>
+            <sys_updated_on>2018-07-06 21:54:40</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

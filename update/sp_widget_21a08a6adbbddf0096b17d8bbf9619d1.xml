@@ -20,7 +20,7 @@
 	
 
 	
-	c.on = function(description,topic,hospital,speaker,time,end_time,location){
+	c.on = function(description,topic,hospital,speaker,time,end_time,location,application,role){
 		c.data.description = description;
 		c.data.topic = topic;
 		c.data.hospital = hospital;
@@ -28,6 +28,8 @@
 		c.data.time = time;
 		c.data.end_time = end_time;
 		c.data.location = location;
+		c.data.application = application;
+		c.data.role = role;
     document.getElementById("overlay").style.display = "block";
 }
 
@@ -340,6 +342,10 @@
     background-color:#fff;
 }
 
+.pointer{
+  cursor: pointer;
+}
+
 
 .add{
 cursor: pointer;
@@ -526,7 +532,7 @@ function removeSession(session,user){
         <sys_created_on>2018-05-04 02:01:45</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>21a08a6adbbddf0096b17d8bbf9619d1</sys_id>
-        <sys_mod_count>718</sys_mod_count>
+        <sys_mod_count>722</sys_mod_count>
         <sys_name>SWUG Sessions</sys_name>
         <sys_package display_value="SWUG 19" source="x_sthc_swug_19">89eb904ddb71138040f8fcfa0c961950</sys_package>
         <sys_policy/>
@@ -534,7 +540,7 @@ function removeSession(session,user){
         <sys_scope display_value="SWUG 19">89eb904ddb71138040f8fcfa0c961950</sys_scope>
         <sys_update_name>sp_widget_21a08a6adbbddf0096b17d8bbf9619d1</sys_update_name>
         <sys_updated_by>LGOMEZ</sys_updated_by>
-        <sys_updated_on>2018-06-05 23:08:31</sys_updated_on>
+        <sys_updated_on>2018-06-15 20:22:16</sys_updated_on>
         <template><![CDATA[<div class="global">
   
 
@@ -697,12 +703,12 @@ function removeSession(session,user){
 <div class="wrapper">
   <div class="header">
     <h1>
-     <b> Adgenda & Sessions</b>
+     <b> Agenda & Sessions</b>
     </h1>
   </div>
   
   <div id="adgenda">
-<h1>Friday, Marth 29th 2019</h1>
+<h1>Friday, March 29th 2019</h1>
     <table>
       <tr>
         <th></th>
@@ -763,11 +769,13 @@ function removeSession(session,user){
     <h5>{{c.data.description}}</h5>
     <h4><b>Presenting Hospital: </b>{{c.data.hospital}}</h4>
     <h4><b>Speaker: </b>{{c.data.speaker}}</h4>
+    <h4><b>Role: </b>{{c.data.role}}</h4>
+    <h4><b>Application: </b>{{c.data.application}}</h4>
     <h4><b>Time: </b>{{c.data.time}} - {{c.data.end_time}}</h4>
      <h4><b>Location: </b>{{c.data.location}}</h4>
      </div>
 </div>
-  <a ng-click="c.on(course.description,course.topic,course.hospital,course.speaker,course.time,course.end_time,course.room)">Read More Detail</a>
+  <a class="pointer" ng-click="c.on(course.description,course.topic,course.hospital,course.speaker,course.time,course.end_time,course.room,course.application,course.role)">Read More Detail</a>
 
     <span class="add">
       

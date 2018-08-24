@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="gsw_change_log">
+    <gsw_change_log action="INSERT_OR_UPDATE">
+        <change_date>2018-08-01 15:34:20</change_date>
+        <changed_by display_value="Louie Gomez">9dd736c46fd4710068ceda0cbb3ee476</changed_by>
+        <content display_value="Auto-Assign MID Server IP Ranges">bf6daef6c3d432007bf1bea192d3aed9</content>
+        <related_change_log_entry/>
+        <related_task_entry/>
+        <sys_class_name>gsw_change_log</sys_class_name>
+        <sys_created_by>LGOMEZ</sys_created_by>
+        <sys_created_on>2018-08-01 15:34:20</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>d020d7dbdba71b4096b17d8bbf961956</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>2018-08-01 15:34:20</sys_name>
+        <sys_package display_value="SWUG 19" source="x_sthc_swug_19">89eb904ddb71138040f8fcfa0c961950</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="SWUG 19">89eb904ddb71138040f8fcfa0c961950</sys_scope>
+        <sys_update_name>gsw_change_log_d020d7dbdba71b4096b17d8bbf961956</sys_update_name>
+        <sys_updated_by>LGOMEZ</sys_updated_by>
+        <sys_updated_on>2018-08-01 15:34:20</sys_updated_on>
+        <type>1</type>
+    </gsw_change_log>
+</record_update>

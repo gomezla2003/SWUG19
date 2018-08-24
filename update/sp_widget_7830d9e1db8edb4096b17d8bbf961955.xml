@@ -12,7 +12,7 @@
 });
 	
 	
-	c.on = function(description,topic,hospital,speaker,time,end_time,location){
+	c.on = function(description,topic,hospital,speaker,time,end_time,location,application,role){
 		c.data.description = description;
 		c.data.topic = topic;
 		c.data.hospital = hospital;
@@ -20,6 +20,8 @@
 		c.data.time = time;
 		c.data.end_time = end_time;
 		c.data.location = location;
+		c.data.application = application;
+		c.data.role = role;
     document.getElementById("overlay").style.display = "block";
 }
 
@@ -150,15 +152,13 @@
   padding-top:30px;
 }
 
-@media (min-width:768px){
-  .nav__menu-container{
-    margin-top:0;padding-right:1.6rem}}
+
 .nav__menu-container .nav__menu-item{
   border-top:.1rem solid #f2f2f2;
-  padding:1.2rem 0;text-transform:uppercase}
-@media (min-width:768px){
-  .nav__menu-container .nav__menu-item{
-    padding:.4rem 0}}
+  padding:.4rem 0;
+  text-transform:uppercase}
+
+
 .nav__menu-container .nav__menu-link--undecorated{
       color:gray;
   text-decoration:none;
@@ -168,10 +168,11 @@
 .nav__menu-container .nav__menu-link--undecorated:hover{
   color:#000}
 
+
 //Sessions
 
 .sessionContainer{
-  width: 80%;
+  width: 100%;
   height: 150px;
   background-color:#fff;
   position:relative;
@@ -237,6 +238,10 @@
     -ms-transform: translate(-50%,-50%);
   background-color:#eee;
 }
+.pointer{
+  cursor:pointer;
+}
+
 .more{
   cursor: pointer;
 position: absolute;
@@ -255,9 +260,16 @@ position: absolute;
 .wrapper{
   width:80%;
   float:right;
+  margin-top: -400px;
 }
+@media only screen and (max-width: 1400px){
+  .wrapper{
+    width:100%;
+    float:right;
+    margin-top:20px;
+  }}
 .header{
-  width: 90%;
+  width: 100%;
   background-color:#72246c;
   text-align:center;
   margin:auto;
@@ -276,6 +288,52 @@ position: absolute;
     margin-top:10px;
     width: 100%;
   }}
+
+//OPTION BOXES
+#boxes{
+  width: 50%;
+ background-color:red;
+  margin: 0 auto;
+     padding: 10px;
+  position:relative;
+  height:100px;
+  
+}
+.remove-box{
+  
+  background-color:blue;
+ 
+  height: auto;
+  width:20%;
+
+  -webkit-box-shadow:0 .5rem 2.5rem .6rem rgba(0,0,0,.25);
+  
+  box-shadow:0 .5rem 2.5rem .6rem rgba(0,0,0,.25);
+  -webkit-transition:all .25s ease;
+  transition:all .25s ease
+}
+.cancel-box{
+  
+  background-color:yellow;
+ 
+  width:20%;
+  
+  -webkit-box-shadow:0 .5rem 2.5rem .6rem rgba(0,0,0,.25);
+  box-shadow:0 .5rem 2.5rem .6rem rgba(0,0,0,.25);
+  -webkit-transition:all .25s ease;
+  transition:all .25s ease
+}
+.print-box{
+  
+  background-color:green;
+
+  width:20%;
+  
+  -webkit-box-shadow:0 .5rem 2.5rem .6rem rgba(0,0,0,.25);
+  box-shadow:0 .5rem 2.5rem .6rem rgba(0,0,0,.25);
+  -webkit-transition:all .25s ease;
+  transition:all .25s ease
+}
 
 
 </css>
@@ -364,7 +422,7 @@ function removeSession(session,user){
         <sys_created_on>2018-05-13 06:11:51</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>7830d9e1db8edb4096b17d8bbf961955</sys_id>
-        <sys_mod_count>21</sys_mod_count>
+        <sys_mod_count>105</sys_mod_count>
         <sys_name>SWUG MySchedule</sys_name>
         <sys_package display_value="SWUG 19" source="x_sthc_swug_19">89eb904ddb71138040f8fcfa0c961950</sys_package>
         <sys_policy/>
@@ -372,7 +430,7 @@ function removeSession(session,user){
         <sys_scope display_value="SWUG 19">89eb904ddb71138040f8fcfa0c961950</sys_scope>
         <sys_update_name>sp_widget_7830d9e1db8edb4096b17d8bbf961955</sys_update_name>
         <sys_updated_by>LGOMEZ</sys_updated_by>
-        <sys_updated_on>2018-05-30 17:29:28</sys_updated_on>
+        <sys_updated_on>2018-07-20 17:05:34</sys_updated_on>
         <template><![CDATA[<div class="global">
   
 
@@ -408,7 +466,7 @@ function removeSession(session,user){
       <p>
         --------------------------------------
    <br />
-        April 23rd • Phoenix, AZ </p>
+        March 29th • Scottsdale, AZ </p>
        </div>
   </h3>
  
@@ -452,14 +510,22 @@ function removeSession(session,user){
       </div>
   </div>
 
+  
+  
+    
+  
+
+  
 <div class="wrapper">
+  
+  
   <div class="header">
     <h1>
       <b> My Schedule</b>
     </h1>
   </div>
   
-</div>
+
 
 
 
@@ -490,11 +556,13 @@ function removeSession(session,user){
     <h5>{{c.data.description}}</h5>
     <h4><b>Presenting Hospital: </b>{{c.data.hospital}}</h4>
     <h4><b>Speaker: </b>{{c.data.speaker}}</h4>
+        <h4><b>Role: </b>{{c.data.role}}</h4>
+    <h4><b>Application: </b>{{c.data.application}}</h4>    
     <h4><b>Time: </b>{{c.data.time}} - {{c.data.end_time}}</h4>
      <h4><b>Location: </b>{{c.data.location}}</h4>
      </div>
 </div>
-  <a ng-click="c.on(course.description,course.topic,course.hospital,course.speaker,course.time,course.end_time,course.room)">Read More Detail</a>
+  <a class="pointer" ng-click="c.on(course.description,course.topic,course.hospital,course.speaker,course.time,course.end_time,course.room,course.application,course.role)">Read More Detail</a>
 
   </div>
 
@@ -513,6 +581,7 @@ function removeSession(session,user){
 
 
 
+</div>
 </div>
 
  ]]></template>

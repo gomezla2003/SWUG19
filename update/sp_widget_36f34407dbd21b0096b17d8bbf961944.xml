@@ -6,16 +6,58 @@
 	  var c = this;
 
 	c.submit = function(){
-		
-	c.server.update();
+	
+		if((!c.data.firstName)||(!c.data.lastName)||(!c.data.title)||(!c.data.email)||(!c.data.phone)||(!c.data.hospital)||(!c.data.presentation_title)||(!c.data.length)||(!c.data.app)||(!c.data.audience)||(!c.data.shortdescription)||(!c.data.details)||(!c.data.disclose)||(!c.data.comments)){
+			alert("Please fill out all fields before submitting");
+			return false;
+		}
+		c.data.additionals = $scope.choices;
+	  c.server.update();
 	}
-
+	
+	
+	
+	 $scope.choices = [{"id": 1,"type":"name","title":""}];
+    
   
-				 
+  $scope.index = $scope.choices.length;
+  
+  $scope.addNewChoice = function() {
+    var newItemNo = ++$scope.index;
+    $scope.choices.push({'id':newItemNo, "type":"name","title":""});
+    c.data.test = $scope.choices;
+    
+  };
+    
+  $scope.removeChoice = function(id) {
+  
+        if($scope.choices.length<=1){
+            alert("input cannot be less than 1");
+            return;
+        }
+  
+  
+        var index = -1;
+   var comArr = eval( $scope.choices );
+   for( var i = 0; i < comArr.length; i++ ) {
+   if( comArr[i].id === id) {
+   index = i;
+   break;
+   }
+		}
+   if( index === -1 ) {
+   alert( "Something gone wrong" );
+		}
+    $scope.choices.splice( index, 1 );
+  };
+	
+	
+
 				 
 	}
 	
-	
+
+ 
 ]]></client_script>
         <controller_as>c</controller_as>
         <css>
@@ -80,11 +122,11 @@
 
 
 .nav__container{
-  //position:relative;
+  position:relative;
   top:40px;
   left:0;
   width:300px;
-  height: 450px;
+  height: 350px;
   background-color:#fff;
   z-index:20;
   -webkit-box-shadow:0 .5rem 2.5rem .6rem rgba(0,0,0,.25);
@@ -109,12 +151,10 @@
 }
 
 
-
 .nav__menu-container .nav__menu-item{
   border-top:.1rem solid #f2f2f2;
-  padding:1.2 rem 0;
+  padding:.4rem 0;
   text-transform:uppercase}
-
 
 
 .nav__menu-container .nav__menu-link--undecorated{
@@ -125,6 +165,7 @@
 
 .nav__menu-container .nav__menu-link--undecorated:hover{
   color:#000}
+
 
 //Button
 .btn-submit{
@@ -143,26 +184,56 @@
 	cursor:pointer;
 }
 .form{
-  width: 90%;
+  width: 120%;
   margin: auto;
+
 }
 
   .wrapper{
     position:relative;
-    margin-top:-400px;
+    margin-top: -330px;
     float: right;
-    width: 80%
+    width: 70%
   }
 
-@media screen and (max-width:1200px)  {
+@media screen and (max-width:1000px)  {
   .wrapper{
-    margin-top:10px;
+    margin-top:30px;
     float:none;
   } }
   
+//ADDITIONAL PRESENTERS
+#choicesDisplay {
+    padding: 10px;
+    background: rgb(227, 250, 227);
+    border: 1px solid rgb(171, 239, 171);
+    color: rgb(9, 56, 9);
+}
+.remove{
+    background: #C76868;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 21px;
+    border: 0;
+    cursor: pointer;
+    display: inline-block;
+    padding: 4px 9px;
+    vertical-align: top;
+    line-height: 100%;   
+}
 
+.presenterInfo{
+  background-color: pink;
+}
+.additional{
+  width:103%;
+
+}
+.header{
+  width:80%;}
   
-  
+.row{
+  width: 150%;}
   
   </css>
         <data_table>sp_instance</data_table>
@@ -186,18 +257,45 @@ data.is_logged_in = gs.getSession().isLoggedIn();
 	
 if(input){
 	
-	createUser();
-	gs.addInfoMessage("Thank you " + input.firstName + " " + input.lastName + ". You have been registered");
+	var se = createSession();
+	createUser(se);
+	createAdditionalUsers(se);
+	
+	gs.addInfoMessage("Thank you " + input.firstName + " " + input.lastName + ". Your presentation has been submitted");
 	
 }
 	
 	
-	
-	
 
 })();
+function createAdditionalUsers(session){
+	var addUser = input.additionals;
+	for(i=0; i<addUser.length; i++){
+	if(addUser[i].firstName){
+	var us = new GlideRecord('x_sthc_swug_19_swug_users_extended');
+	us.initialize();
+	us.first_name = addUser[i].firstName;
+	us.last_name = addUser[i].lastName;
+	us.email = addUser[i].email;
+	us.swug_role = addUser[i].title;
+	us.hospital = addUser[i].organization;
+	us.password_needs_reset = 'true';
+	us.user_name = addUser[i].email;
+	
+	var user = us.insert();
+	createMap(user,session)
+	
+	var rl = new GlideRecord('sys_user_has_role');
+	rl.initialize();
+	rl.setValue('user',user);
+	rl.setValue('role','940ba702933002009c8579b4f47ffbe2');
+	rl.insert();
+	}
+	
+	}
+}
 
-function createUser(){
+function createUser(session){
 	var us = new GlideRecord('x_sthc_swug_19_swug_users_extended');
 	us.initialize();
 	us.first_name = input.firstName;
@@ -205,15 +303,48 @@ function createUser(){
 	us.email = input.email;
 	us.mobile_phone = input.phone
 	us.hospital = input.hospital;
+	us.swug_role = input.title;
 	us.password_needs_reset = 'true';
 	us.user_name = input.email;
+	
 	var user = us.insert();
+	createMap(user,session)
 	
 	var rl = new GlideRecord('sys_user_has_role');
 	rl.initialize();
 	rl.setValue('user',user);
 	rl.setValue('role','940ba702933002009c8579b4f47ffbe2');
 	rl.insert();
+	
+	gs.eventQueue('x_sthc_swug_19.SWUG.New.Session',data.session,user);
+
+}
+
+function createSession(){
+	var ses = new GlideRecord('x_sthc_swug_19_swug19_sessions');
+	ses.initialize();
+	ses.speaker = input.firstName + " " + input.lastName;
+	ses.presenting_hospital = input.hospital;
+	ses.topic = input.presentation_title;
+	ses.length_of_presentation = input.length;
+	ses.application = input.app.toString();
+	ses.role = input.audience.toString();
+	ses.abstract = input.shortdescription;
+	ses.detail = input.details;
+	ses.conflict = input.disclose;
+	//ses.cec = input.cec;
+	ses.comments = input.comments;
+	var session = ses.insert();
+	data.session = ses;
+	return session;
+	
+}
+
+function createMap(user,session){
+	var map = new GlideRecord('x_sthc_swug_19_speaker_map');
+	map.setValue('session',session);
+	map.setValue('speaker',user);
+	map.insert();
 	
 }]]></script>
         <servicenow>false</servicenow>
@@ -222,7 +353,7 @@ function createUser(){
         <sys_created_on>2018-05-30 02:45:27</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>36f34407dbd21b0096b17d8bbf961944</sys_id>
-        <sys_mod_count>95</sys_mod_count>
+        <sys_mod_count>359</sys_mod_count>
         <sys_name>SWUG Presentations</sys_name>
         <sys_package display_value="SWUG 19" source="x_sthc_swug_19">89eb904ddb71138040f8fcfa0c961950</sys_package>
         <sys_policy/>
@@ -230,8 +361,16 @@ function createUser(){
         <sys_scope display_value="SWUG 19">89eb904ddb71138040f8fcfa0c961950</sys_scope>
         <sys_update_name>sp_widget_36f34407dbd21b0096b17d8bbf961944</sys_update_name>
         <sys_updated_by>LGOMEZ</sys_updated_by>
-        <sys_updated_on>2018-05-30 21:56:05</sys_updated_on>
-        <template><![CDATA[
+        <sys_updated_on>2018-08-17 20:30:34</sys_updated_on>
+        <template><![CDATA[<!--
+    <link href="http://wenzhixin.net.cn/p/bootstrap-table/src/bootstrap-table.css" rel="stylesheet" type="text/css" />
+
+    <link href="http://cdn.kendostatic.com/2014.1.318/styles/kendo.common.min.css" rel="stylesheet" />
+    <link href="http://cdn.kendostatic.com/2014.1.318/styles/kendo.bootstrap.min.css" rel="stylesheet" />
+    <link href="http://protostrap.com/Assets/gv/css/gv.bootstrap-form.css" rel="stylesheet" type="text/css" />
+-->
+
+
   
 
     
@@ -264,21 +403,21 @@ function createUser(){
       <p>
         --------------------------------------
    <br />
-        March 29th • Phoenix, AZ </p>
+        March 29th • Scottsdale, AZ </p>
        </div>
   </h3>
  
         <div class="nav__menu-container">
     
             <div class="nav__menu-item">
-                <a class="nav__menu-link--undecorated" id="click" href="/swug19">Home</a>
+                <a class="nav__menu-link--undecorated" id="click" href="/swug19">Why Attend</a>
             </div>
           
            <div class="nav__menu-item">
                 <a class="nav__menu-link--undecorated" id="click" href="/swug19?id=swug19_location">Location</a>
             </div>
     
-        
+        <!--
             <div class="nav__menu-item">
                 <a class="nav__menu-link--undecorated" href="/swug19?id=swug_sessions">Sessions</a>
 	          </div>
@@ -288,11 +427,15 @@ function createUser(){
             </div>
           
           <div class="nav__menu-item">
+            <a class="nav__menu-link--undecorated" href="#">FAQ</a>
+            </div>-->
+          
+          <div class="nav__menu-item">
                 <a class="nav__menu-link--undecorated"  href="/swug19?id=swug_presentations">Call for presentations</a>
             </div>
           
             
-            
+            <!--
                   <item ng-if="data.is_logged_in == false" class="nav__menu-item">
                <div class="nav__menu-item">
                  <a class="nav__menu-link--undecorated" href="/swug19?id=swug_registration">Registration</a><br />
@@ -301,24 +444,110 @@ function createUser(){
           
           <item ng-if="data.is_logged_in">
             <div class="nav__menu-item"><a class="nav__menu-link--undecorated" href="/swug19?id=swug_myschedule">My Schedule</a><br /></div>
-            <div class="nav__menu-item"><a class="nav__menu-link--undecorated" href="/logout.do">${Logout}</a></div>
+            <div class="nav__menu-item hand"><a class="nav__menu-link--undecorated" href="{{::portal.logoutUrl}}">${Logout}</a></div>
           </item>
-                
+                -->
     
       </div>
   </div>
+    
+    <!-- Login -->
+    <!--
+    <div class="login" ng-if="!data.is_logged_in">
+      
+   
+    <div >
+  <form ng-if="!c.externalLoginMode" class="form-signin" ng-submit="c.login(c.username, c.password)" method="post">
+		<div ng-class="{'panel panel-default': c.options.show_panel}">
+			<div ng-if="c.options.show_panel" class="panel-heading">	      
+				<h3 class="panel-title">${Login}</h3>
+			</div>
+
+			<div ng-class="{'panel-body': c.options.show_panel}">
+
+				<div class="list-group list-group-sm">
+					<div class="list-group-item">
+            <label for="username" class="sr-only">{{::data.usernameMsg}}</label>
+            <input id="username" name="username" autocapitalize="off" ng-keypress="c.message = ''" ng-click="c.message = ''" class="form-control no-border" type="text" placeholder='{{::data.usernameMsg}}' autofocus="true" ng-model="c.username"/>
+					</div>
+					<div class="list-group-item">
+            <label for="password" class="sr-only">{{::data.passwordMsg}}</label>
+            <input id="password" name="password" ng-keypress="c.message = ''" ng-click="c.message = ''" class="form-control no-border" type="password" placeholder='{{::data.passwordMsg}}' ng-model="c.password"/>
+					</div>
+				</div>
+
+				<div ng-if="c.message" class="alert alert-danger" role="alert">{{c.message}}</div>
+				<div ng-if="c.success" class="alert alert-success" role="alert">{{c.success}}</div>
+-->
+				<!--<div ng-if="!c.data.forgetMe" class="checkbox">
+          <label>
+            <input name="c.remember_me" ng-model="c.remember_me" checked="checked" id="remember_me" type="checkbox" class="checkbox" value="true"/> ${Remember me}
+					</label>
+				</div>
+-->
+    <!--
+        <div>
+          <a href="#"> forgot my password</a>
+        </div>
+        <button name="login" type="submit" class="btn btn-lg btn-primary btn-block">
+          ${Login}
+        </button>
+
+        <a ng-if="data.multisso_enabled"
+           class="set-login-type-link"
+           href="javascript:void(0)"
+           ng-click="c.setExternalLogin(true)">${Use external login}</a>
+			</div>
+		</div>
+	</form>
+	<form ng-if="c.externalLoginMode" class="form-signin" ng-submit="c.externalLogin()" method="post">
+		<div ng-class="{'panel panel-default': c.options.show_panel}">
+			<div ng-if="c.options.show_panel" class="panel-heading">
+				<h3 class="panel-title">${External Login}</h3>
+			</div>
+
+			<div ng-class="{'panel-body': c.options.show_panel}">
+				<div class="list-group list-group-sm">
+					<div class="list-group-item">
+            <label for="username" class="sr-only">${User ID}</label>
+            <input id="username" name="username" ng-click="message = ''" class="form-control no-border" type="text" placeholder='${User ID}' autofocus="true" ng-model="c.username"/>
+					</div>
+				</div>
+
+        <button name="login" type="submit" class="btn btn-lg btn-primary btn-block">
+          ${Submit}
+        </button>
+
+        <a href="javascript:void(0)"
+           class="set-login-type-link"
+           ng-click="c.setExternalLogin(false)">${Use internal login}</a>
+			</div>
+		</div>
+	</form>
+</div>
+     </div>
+-->
+    <!-- End Login -->
 
 
  <div class="wrapper">
    
 
-    <form class="form-horizontal form">
+    <form class="form-horizontal form ">
 <fieldset>
 
 <!-- Form Name -->
-<legend>SoutWest User Group Call For Presentations</legend>
+<legend>Southwest User Group Call For Presentations</legend>
+  <h4 class="header">
+    Thank you for submitting a presentation to the 2019 SWUGM! The deadline to submit a topic is January 25th, 2019. Final powerpoints will be due on March 16th, 2019. Please send completed powerpoints and any questions to <a href="mailto:SWUGM@honorhealth.com" target="_top">SWUGM@honorhealth.com</a> and include that you are a presenter or potential presenter in the subject line. 
+  </h4><br />
 
 <!-- Text input-->
+    
+  
+  <div class="col-md-7">
+    
+  
 <div class="form-group">
   <label class="control-label" for="firstName">First Name</label>  
   <input ng-model="data.firstName" id="firstName" name="firstName" type="text" placeholder="First Name" class="form-control input-md" required="">
@@ -332,8 +561,14 @@ function createUser(){
 
 <!-- Text input-->
 <div class="form-group">
+  <label class="control-label" for="title">Title</label>  
+  <input ng-model="data.title" id="title" name="title" type="text" placeholder="Title" class="form-control input-md">
+</div>    
+    
+    <!-- Text input-->
+<div class="form-group">
   <label class="control-label" for="email">E-mail</label>  
-  <input ng-model="data.email" id="email" name="email" type="email" placeholder="E-mail" class="form-control input-md">
+  <input ng-model="data.email" id="email" name="email" type="text" placeholder="E-mail" class="form-control input-md">
 </div>
 
 <!-- Text input-->
@@ -344,43 +579,201 @@ function createUser(){
 
 <!-- Text input-->
 <div class="form-group">
-  <label class="control-label" for="hospital">Hospital/Company</label>  
-  <input ng-model="data.hospital" id="hospital" name="hospital" type="text" placeholder="Hospital/Company" class="form-control input-md">
+  <label class="control-label" for="hospital">Hospital/Organization</label>  
+  <input ng-model="data.hospital" id="hospital" name="hospital" type="text" placeholder="Hospital/Organization" class="form-control input-md">
 </div>
+      
+    
+    
+    <!-- Text input-->
+<div class="form-group">
+  <label class="control-label" for="presentation_title">Presentation Title</label>  
+  <input ng-model="data.presentation_title" id="presentation_title" name="presentation_title" type="text" placeholder="Presentation Title" class="form-control input-md">
+</div>
+    
+    <div class="form-group">
+    <label for="length" class="control-label">Length of Presentation</label> 
+      <select ng-model="data.length" id="length" name="length" class="select form-control">
+        <option value="30">30 Minutes</option>
+        <option value="45">45 Minutes</option>
+        <option value="60">60 Minutes</option>
+      </select>
+  </div> 
+  
+    <div class="form-group">
+    <label for="app" class="control-label">Epic Application (Multiple Select)</label> 
+      <select ng-model="data.app" id="app" name="app" class="select form-control" multiple="multiple">
+        <option value="all">All</option>
+        <option value="Other">Other</option>
+        <option value="None">None</option>
+        <option value="-">-------------</option>
+        <option value="ASAP">ASAP</option>
+        <option value="Beacon">Beacon</option>
+        <option value="Beaker">Beaker</option>
+        <option value="BedTime / Grand Central">BedTime / Grand Central</option>
+        <option value="Bridges">Bridges</option>
+        <option value="Canto / Haiku / Rover">Canto / Haiku / Rover</option>
+        <option value="Care Everywhere">Care Everywhere</option>
+        <option value="CRM / Call Management">CRM / Call Management</option>
+        <option value="Cupid">Cupid</option>
+        <option value="EpicCare Ambulatory">EpicCare Ambulatory</option>
+        <option value="EpicCare Inpatient Clin Doc">EpicCare Inpatient Clin Doc</option>
+        <option value="EpicCare Inpatient Orders">EpicCare Inpatient Orders</option>
+        <option value="EpicCare Link">EpicCare Link</option>
+        <option value="Healthy Planet">Healthy Planet</option>
+        <option value="HIM">HIM</option>
+        <option value="Home Health">Home Health</option>
+        <option value="Hospital Billing / Claims">Hospital Billing / Claims</option>
+        <option value="ICON">ICON</option>
+        <option value="Kaleidoscope">Kaleidoscope</option>
+        <option value="MyChart / MyChart Bedside">MyChart / MyChart Bedside</option>
+        <option value="Nurse Triage">Nurse Triage</option>
+        <option value="OpTime / Anesthesia">OpTime / Anesthesia</option>
+        <option value="Prelude / Cadence">Prelude / Cadence</option>
+        <option value="Professional Billing / Claims">Professional Billing / Claims</option>
+        <option value="Radiant">Radiant</option>
+        <option value="Reporting / Clarity / Caboodle / Radar">Reporting / Clarity / Caboodle / Radar</option>
+        <option value="Research">Research</option>
+        <option value="Stork">Stork</option>
+        <option value="Tapestry">Tapestry</option>
+        <option value="Welcome">Welcome</option>
+        <option value="Willow Inpatient / Willow Ambulatory">Willow Inpatient / Willow Ambulatory</option>
+        <option value="Wisdom">Wisdom</option>
+      </select>
+  </div> 
+        
+       <div class="form-group">
+    <label for="audience" class="control-label">Target Audience (Multiple Select)</label> 
+      <select ng-model="data.audience" id="audience" name="audience" class="select form-control" multiple="multiple">
+        <option value="all">Analyst</option>
+        <option value="Other">Trainer</option>
+        <option value="None">Project Manager</option>
+        <option value="IT Leader">IT Leader</option>
+        <option value="Clinical User / Leader">Clinical User / Leader</option>
+        <option value="Rev Cycle User / Leader">Rev Cycle User / Leader</option>
+        <option value="Other">Other</option>     
+      </select>
+  </div> 
+    
+    
+     <div class="form-group">
+    <label for="short_description" class="control-label">Presentation Short Description</label> 
+      <textarea ng-model="data.shortdescription" id="short_description" name="short_description" cols="40" rows="2" aria-describedby="short_descriptionHelpBlock" class="form-control"></textarea> 
+      <span id="short_descriptionHelpBlock" class="help-block">This description will appear to attendees on the registration site</span>
+    </div>
+  
   
   <!-- Text input-->
 <div class="form-group">
-  <label class="control-label" for="applicaiton">Epic Applicaiton</label>  
-  <input ng-model="data.app" id="app" name="app" type="text" placeholder="Epic Application" class="form-control input-md">
-</div>
-  
-  <!-- Text input-->
-<div class="form-group">
-  <label class="control-label" for="audience">Audience</label>  
-  <input ng-model="data.audience" id="audience" name="audience" type="text" placeholder="Audience" class="form-control input-md">
-</div>
-  
-  <!-- Text input-->
-<div class="form-group">
-  <label class="control-label" for="hospital">Tell us about your presentation</label>  
-  <textarea ng-model="data.details" id="details" name="details" placeholder="My presentation details..." rows="6" class="form-control input-lg"></textarea>
+  <label class="control-label" for="details">Presentation Details / Learning Objectives</label>  
+  <textarea ng-model="data.details" id="details" name="details" placeholder="Presentation Details / Learning Objectives" rows="6" class="form-control input-lg"></textarea>
 </div>
 
+  
+    
+<label>Additional Presenters</label>
+ <div class="row" data-ng-repeat="choice in choices">
+<div class="col-sm-2">
+      <input class="form-control" type="text" ng-model="choice.firstName" name="" placeholder="First Name">
+       </div>
+<div class="col-sm-2">
+      <input class="form-control" type="text" ng-model="choice.lastName" name="" placeholder="Last Name">
+       </div>
+   <div class="col-sm-2">
+      <input class="form-control" type="text" ng-model="choice.title" name="" placeholder="Title">
+       </div>
+    <div class="col-sm-2">
+      <input class="form-control" type="text" ng-model="choice.email" name="" placeholder="Email Address">
+       </div>
+  
+         <button class="btn btn-danger" ng-click="removeChoice(choice.id)" ng-if="choice.id!=index">-</button>
+      <button class="btn btn-danger" ng-click="addNewChoice()" ng-if="choice.id===index">+</button>
+      </div><br>
+    
+    
+    <!--
+ <div class="additional" ng-app="angularjs-starter" ng-controller="MainCtrl">
+   <label>Additional Presenters</label>
+  <ul class="list-group">
+    <li class="list-group-item" data-ng-repeat="choice in choices">
+   
+    
+      <div class="col-sm-3">
+      <input class="form-control" type="text" ng-model="choice.firstName" name="" placeholder="First Name">
+       </div>
+      
+       <div class="col-sm-3">
+      <input class="form-control" type="text" ng-model="choice.lastName" name="" placeholder="Last Name">
+       </div>
+      
+      <div class="col-sm-3">
+      <input class="form-control" type="text" ng-model="choice.title" name="" placeholder="Title">
+       </div>
+      
+       <div class="col-sm-3">
+      <input class="form-control" type="text" ng-model="choice.organization" name="" placeholder="Organization">
+       </div>
+      
+       <div class="col-sm-3">
+      <input class="form-control" type="text" ng-model="choice.email" name="" placeholder="Email Address">
+       </div>
+      
+      
+     
+      <button class="btn btn-danger" ng-click="removeChoice(choice.id)" ng-if="choice.id!=index">-</button>
+      <button class="btn btn-danger" ng-click="addNewChoice()" ng-if="choice.id===index">+</button>
+    
+       </li>
+  </ul>   
+  <br>    
+</div>
+-->
+    
+    
+    
+    
+     <div class="form-group">
+    <label for="disclose" class="control-label">Do any of the presenters have a conflict of interest to disclose?</label> 
+      <select ng-model="data.disclose" id="disclose" name="disclose" class="select form-control">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+        <option value="Unsure">Unsure</option>
+      </select>
+        <span id="short_descriptionHelpBlock" class="help-block">This would include any affiliation of financial interest in a company or a produced descripted in the presentation</span>
+  </div> 
+ 
+    <!--
+   <div class="form-group">
+    <label for="cec" class="control-label">Do you want to apply for this presentation to count for Continuing Education Credits?</label> 
+      <select ng-model="data.cec" id="cec" name="cec" class="select form-control">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+        <option value="Unsure">Unsure</option>
+      </select>
+  </div>--> 
+  
+   <!-- Text input-->
+<div class="form-group">
+  <label class="control-label" for="comments">Additional Comments/Requests for the Event Organizers?</label>  
+  <textarea ng-model="data.comments" id="comments" name="comments" placeholder="Additional Comments/Requests for the Event Organizers?" rows="3" class="form-control input-lg"></textarea>
+</div>
+</div>
 
 </fieldset>
       
       <button class="btn-submit" ng-click="c.submit()">
         Submit
-      </button>
+      </button><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 </form>
    </div>
 
     
     
 
+  
 
 
 
- ]]></template>
+]]></template>
     </sp_widget>
 </record_update>

@@ -14,58 +14,6 @@
             <sys_updated_by>LGOMEZ</sys_updated_by>
             <sys_updated_on>2018-05-13 00:06:45</sys_updated_on>
         </sys_ui_form_section>
-        <sys_ui_form_section action="INSERT_OR_UPDATE">
-            <position>1</position>
-            <sys_created_by>LGOMEZ</sys_created_by>
-            <sys_created_on>2018-05-13 00:06:45</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_id>a8ac7315db8adb4096b17d8bbf9619df</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_overrides/>
-            <sys_ui_form display_value="x_sthc_swug_19_swug_users_extended" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">acac7315db8adb4096b17d8bbf9619da</sys_ui_form>
-            <sys_ui_section caption="Security Information" display_value="Security Information" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">a8ac7315db8adb4096b17d8bbf9619dd</sys_ui_section>
-            <sys_updated_by>LGOMEZ</sys_updated_by>
-            <sys_updated_on>2018-05-13 00:06:45</sys_updated_on>
-        </sys_ui_form_section>
-        <sys_ui_form_section action="INSERT_OR_UPDATE">
-            <position>2</position>
-            <sys_created_by>LGOMEZ</sys_created_by>
-            <sys_created_on>2018-05-13 00:06:45</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_id>24acb315db8adb4096b17d8bbf9619f5</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_overrides/>
-            <sys_ui_form display_value="x_sthc_swug_19_swug_users_extended" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">acac7315db8adb4096b17d8bbf9619da</sys_ui_form>
-            <sys_ui_section caption="Physician Information" display_value="Physician Information" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">acacb315db8adb4096b17d8bbf9619f3</sys_ui_section>
-            <sys_updated_by>LGOMEZ</sys_updated_by>
-            <sys_updated_on>2018-05-13 00:06:45</sys_updated_on>
-        </sys_ui_form_section>
-        <sys_ui_form_section action="INSERT_OR_UPDATE">
-            <position>3</position>
-            <sys_created_by>LGOMEZ</sys_created_by>
-            <sys_created_on>2018-05-13 00:06:45</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_id>acacb315db8adb4096b17d8bbf9619f6</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_overrides/>
-            <sys_ui_form display_value="x_sthc_swug_19_swug_users_extended" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">acac7315db8adb4096b17d8bbf9619da</sys_ui_form>
-            <sys_ui_section caption="Consultant / Vendor Information" display_value="Consultant / Vendor Information" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">28acb315db8adb4096b17d8bbf9619f5</sys_ui_section>
-            <sys_updated_by>LGOMEZ</sys_updated_by>
-            <sys_updated_on>2018-05-13 00:06:45</sys_updated_on>
-        </sys_ui_form_section>
-        <sys_ui_form_section action="INSERT_OR_UPDATE">
-            <position>4</position>
-            <sys_created_by>LGOMEZ</sys_created_by>
-            <sys_created_on>2018-05-13 00:06:45</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_id>a8acb315db8adb4096b17d8bbf9619f3</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_overrides/>
-            <sys_ui_form display_value="x_sthc_swug_19_swug_users_extended" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">acac7315db8adb4096b17d8bbf9619da</sys_ui_form>
-            <sys_ui_section caption="Student / School Information" display_value="Student / School Information" name="x_sthc_swug_19_swug_users_extended" sys_domain="global" view="Default view">a0ac7315db8adb4096b17d8bbf9619e0</sys_ui_section>
-            <sys_updated_by>LGOMEZ</sys_updated_by>
-            <sys_updated_on>2018-05-13 00:06:45</sys_updated_on>
-        </sys_ui_form_section>
         <sys_ui_form action="INSERT_OR_UPDATE">
             <name>x_sthc_swug_19_swug_users_extended</name>
             <roles/>

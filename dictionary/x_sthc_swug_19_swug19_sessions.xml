@@ -1,12 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
     <element label="SWUG19 Sessions" max_length="40" name="x_sthc_swug_19_swug19_sessions" type="collection">
-        <element label="Abstract" max_length="400" name="abstract" type="string"/>
+        <element label="Presentation Short Description" max_length="400" name="abstract" type="string"/>
+        <element label="Epic Application" max_length="100" name="application" type="string"/>
+        <element label="Continuing Education Credits" max_length="40" name="cec" type="string"/>
+        <element label="Additional Comments" max_length="2000" name="comments" type="string"/>
+        <element label="Conflict of Interest" max_length="40" name="conflict" type="string"/>
+        <element label="Presentation Details" max_length="2000" name="detail" type="string"/>
         <element label="End Time" max_length="40" name="end_time" type="glide_date_time"/>
+        <element label="Length of presentation" max_length="40" name="length_of_presentation" type="string"/>
         <element label="Presenting Hospital" max_length="100" name="presenting_hospital" type="string"/>
+        <element label="Target Audience" max_length="100" name="role" type="string"/>
         <element label="Room" max_length="100" name="room" type="string"/>
         <element label="SessionID" max_length="10" name="sessionid" type="string"/>
         <element label="Speaker" max_length="32" name="speaker" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="pending" label="Status" max_length="40" name="status" type="string">
+            <choice>
+                <element label="Pending" sequence="1" value="pending"/>
+                <element label="Approved" sequence="2" value="approved"/>
+                <element label="Rejected" sequence="3" value="Rejected"/>
+            </choice>
+        </element>
         <element label="Start Time" max_length="40" name="time" type="glide_date_time"/>
         <element label="Topic" max_length="100" name="topic" type="string"/>
         <index name="index">

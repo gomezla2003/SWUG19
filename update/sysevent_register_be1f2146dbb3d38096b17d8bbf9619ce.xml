@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sysevent_register">
+    <sysevent_register action="INSERT_OR_UPDATE">
+        <description/>
+        <event_name>x_sthc_swug_19.SWUG.New.Session</event_name>
+        <fired_by>call for presentation widget</fired_by>
+        <queue/>
+        <suffix>SWUG.New.Session</suffix>
+        <sys_class_name>sysevent_register</sys_class_name>
+        <sys_created_by>LGOMEZ</sys_created_by>
+        <sys_created_on>2018-08-09 21:34:30</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>be1f2146dbb3d38096b17d8bbf9619ce</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_sthc_swug_19.SWUG.New.Session</sys_name>
+        <sys_package display_value="SWUG 19" source="x_sthc_swug_19">89eb904ddb71138040f8fcfa0c961950</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="SWUG 19">89eb904ddb71138040f8fcfa0c961950</sys_scope>
+        <sys_update_name>sysevent_register_be1f2146dbb3d38096b17d8bbf9619ce</sys_update_name>
+        <sys_updated_by>LGOMEZ</sys_updated_by>
+        <sys_updated_on>2018-08-09 21:34:30</sys_updated_on>
+        <table>x_sthc_swug_19_attending_sessions</table>
+    </sysevent_register>
+</record_update>
