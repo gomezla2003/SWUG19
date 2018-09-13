@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sysevent_email_action">
+    <sysevent_email_action action="INSERT_OR_UPDATE">
+        <action_insert>false</action_insert>
+        <action_update>true</action_update>
+        <active>true</active>
+        <advanced_condition/>
+        <affected_field_on_event/>
+        <category display_value="SWUG" name="SWUG">e08c61c2dbb3d38096b17d8bbf9619e2</category>
+        <collection>x_sthc_swug_19_swug19_sessions</collection>
+        <condition/>
+        <content_type>multipart/mixed</content_type>
+        <description/>
+        <event_name>x_sthc_swug_19.SWUG.New.Session</event_name>
+        <event_parm_1>false</event_parm_1>
+        <event_parm_2>true</event_parm_2>
+        <exclude_delegates>false</exclude_delegates>
+        <force_delivery>false</force_delivery>
+        <from/>
+        <generation_type>event</generation_type>
+        <importance>high</importance>
+        <include_attachments>false</include_attachments>
+        <item>event.parm1</item>
+        <item_table/>
+        <mandatory>false</mandatory>
+        <message/>
+        <message_html><![CDATA[<p>&nbsp;</p>
+<p><img style="hspace: 5px; align: left;" title="HonorHealth" src="hh_logo.pngx" alt="HonorHealth" width="100" height="50" align="left" border="" hspace="5" vspace="" /></p>
+<p>&nbsp;</p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;"><strong>New South West User Group Session Submitted</strong></span></p>
+<hr style="height: 3px; border: none; color: #000; background-color: #72246c;" />
+<div style="background-color: #fcf4ff; border: .5px solid #72246c;">
+<p><span style="font-size: 12pt;"><strong>Topic:</strong> ${topic}</span></p>
+<p><span style="font-size: 12pt;"><strong>Speaker:</strong> ${speaker}</span></p>
+<p><span style="font-size: 12pt;"><strong>Hospital:</strong> ${presenting_hospital}</span></p>
+</div>
+<p><span style="font-size: 12pt;">Click&nbsp;<a title="here" href="https://shc.service-now.com/nav_to.do?uri=hr_case.do?sys_id=${sys_id}">here</a>&nbsp;to open&nbsp;this session</span></p>
+<div style="background-color: #fcf4ff; border: .5px solid #72246c;">
+<p><span style="font-size: 12pt;"><strong>Short Description:</strong> ${abstract}</span></p>
+<p><span style="font-size: 12pt;"><strong>Details:</strong> ${detail}</span></p>
+</div>
+<p>&nbsp;</p>
+<div style="background-color: #fcf4ff; border: .5px solid #72246c;">
+<p><span style="font-size: 12pt;"><strong>Additional comments:</strong> ${comments}<br /></span></p>
+</div>
+<p>&nbsp;</p>
+<hr style="height: 2px; border: none; color: #000; background-color: #72246c;" />
+<p>&nbsp;</p>
+<p>&nbsp;</p>]]></message_html>
+        <message_list/>
+        <message_text/>
+        <name>SWUG New Session</name>
+        <omit_watermark>false</omit_watermark>
+        <order>100</order>
+        <push_message_only>false</push_message_only>
+        <recipient_fields/>
+        <recipient_groups/>
+        <recipient_users>3dd1bd626f13e100e59533d9ea3ee466</recipient_users>
+        <reply_to/>
+        <send_self>true</send_self>
+        <sms_alternate/>
+        <style/>
+        <subject>HR Case Number: ${number} Priority ${priority} solution has been rejected</subject>
+        <subscribable>false</subscribable>
+        <sys_class_name>sysevent_email_action</sys_class_name>
+        <sys_created_by>LGOMEZ</sys_created_by>
+        <sys_created_on>2018-09-13 15:58:10</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>ecf1b85ddb60238096b17d8bbf9619e6</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>SWUG New Session</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="SWUG 19" source="x_sthc_swug_19">89eb904ddb71138040f8fcfa0c961950</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="SWUG 19">89eb904ddb71138040f8fcfa0c961950</sys_scope>
+        <sys_update_name>sysevent_email_action_ecf1b85ddb60238096b17d8bbf9619e6</sys_update_name>
+        <sys_updated_by>LGOMEZ</sys_updated_by>
+        <sys_updated_on>2018-09-13 16:19:36</sys_updated_on>
+        <sys_version>2</sys_version>
+        <template/>
+        <type>email</type>
+        <weight>5</weight>
+    </sysevent_email_action>
+</record_update>
