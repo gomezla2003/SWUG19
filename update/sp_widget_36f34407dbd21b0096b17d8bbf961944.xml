@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="sp_widget">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
         <client_script><![CDATA[function($scope,$sce) {
   /* widget controller */
 	  var c = this;
@@ -372,7 +372,7 @@ function createMap(user,session){
         <sys_created_on>2018-05-30 02:45:27</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>36f34407dbd21b0096b17d8bbf961944</sys_id>
-        <sys_mod_count>373</sys_mod_count>
+        <sys_mod_count>375</sys_mod_count>
         <sys_name>SWUG Presentations</sys_name>
         <sys_package display_value="SWUG 19" source="x_sthc_swug_19">89eb904ddb71138040f8fcfa0c961950</sys_package>
         <sys_policy/>
@@ -380,7 +380,7 @@ function createMap(user,session){
         <sys_scope display_value="SWUG 19">89eb904ddb71138040f8fcfa0c961950</sys_scope>
         <sys_update_name>sp_widget_36f34407dbd21b0096b17d8bbf961944</sys_update_name>
         <sys_updated_by>SHollien</sys_updated_by>
-        <sys_updated_on>2018-10-15 20:39:58</sys_updated_on>
+        <sys_updated_on>2018-10-18 16:28:05</sys_updated_on>
         <template><![CDATA[<!--
     <link href="http://wenzhixin.net.cn/p/bootstrap-table/src/bootstrap-table.css" rel="stylesheet" type="text/css" />
 
@@ -759,7 +759,7 @@ function createMap(user,session){
         <option value="No">No</option>
         <option value="Unsure">Unsure</option>
       </select>
-        <span id="short_descriptionHelpBlock" class="help-block">This would include any affiliation of financial interest in a company or a produced descripted in the presentation</span>
+        <span id="short_descriptionHelpBlock" class="help-block">This would include any affiliation or financial interest in a company or product described in the presentation</span>
   </div> 
  
     <!--

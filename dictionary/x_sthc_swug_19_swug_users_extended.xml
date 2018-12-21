@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<database>
+<?xml version="1.0" encoding="UTF-8"?><database>
     <element extends="sys_user" label="SWUG Users (extended)" max_length="40" name="x_sthc_swug_19_swug_users_extended" type="collection">
         <element label="Hospital" max_length="40" name="hospital" type="string"/>
         <element label="SWUG Role" max_length="40" name="swug_role" type="string"/>

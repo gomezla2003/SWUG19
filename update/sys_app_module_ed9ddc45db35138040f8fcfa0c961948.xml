@@ -1,8 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update sys_domain="global" table="sys_app_module">
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
     <sys_app_module action="INSERT_OR_UPDATE">
-        <active>true</active>
-        <application display_value="SWUG Users">ad9ddc45db35138040f8fcfa0c961945</application>
+        <active>false</active>
+        <application display_value="SWUG19">ad9ddc45db35138040f8fcfa0c961945</application>
         <assessment/>
         <content_page/>
         <device_type/>
@@ -28,7 +27,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>ed9ddc45db35138040f8fcfa0c961948</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>SWUG Users</sys_name>
         <sys_overrides/>
         <sys_package display_value="SWUG 19" source="x_sthc_swug_19">89eb904ddb71138040f8fcfa0c961950</sys_package>
@@ -37,7 +36,7 @@
         <sys_scope display_value="SWUG 19">89eb904ddb71138040f8fcfa0c961950</sys_scope>
         <sys_update_name>sys_app_module_ed9ddc45db35138040f8fcfa0c961948</sys_update_name>
         <sys_updated_by>LGOMEZ</sys_updated_by>
-        <sys_updated_on>2018-04-29 02:58:04</sys_updated_on>
+        <sys_updated_on>2018-08-27 15:54:55</sys_updated_on>
         <timeline_page/>
         <title>SWUG Users</title>
         <uncancelable>false</uncancelable>

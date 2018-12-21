@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<database>
+<?xml version="1.0" encoding="UTF-8"?><database>
     <element label="SWUG Users" max_length="40" name="x_sthc_swug_19_swug_users" type="collection">
         <element label="Company" max_length="40" name="company" type="string"/>
         <element label="email" max_length="40" name="email" type="string"/>

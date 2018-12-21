@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="20d6609cdb622b0040f8fcfa0c961908" sys_domain="global" table="x_sthc_swug_19_vendor_registration" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>first_name</element>
+            <position>0</position>
+            <sys_created_by>LGOMEZ</sys_created_by>
+            <sys_created_on>2018-12-18 22:41:13</sys_created_on>
+            <sys_id>e4d6e89cdb622b0040f8fcfa0c961966</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_vendor_registration" sys_domain="global" view="Default view">20d6609cdb622b0040f8fcfa0c961908</sys_ui_section>
+            <sys_updated_by>LGOMEZ</sys_updated_by>
+            <sys_updated_on>2018-12-18 22:41:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>vendor_name</element>
+            <position>1</position>
+            <sys_created_by>LGOMEZ</sys_created_by>
+            <sys_created_on>2018-12-18 22:41:13</sys_created_on>
+            <sys_id>ecd6e89cdb622b0040f8fcfa0c961966</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_vendor_registration" sys_domain="global" view="Default view">20d6609cdb622b0040f8fcfa0c961908</sys_ui_section>
+            <sys_updated_by>LGOMEZ</sys_updated_by>
+            <sys_updated_on>2018-12-18 22:41:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>billing_address</element>
+            <position>2</position>
+            <sys_created_by>LGOMEZ</sys_created_by>
+            <sys_created_on>2018-12-18 22:41:13</sys_created_on>
+            <sys_id>60d6e89cdb622b0040f8fcfa0c961967</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_vendor_registration" sys_domain="global" view="Default view">20d6609cdb622b0040f8fcfa0c961908</sys_ui_section>
+            <sys_updated_by>LGOMEZ</sys_updated_by>
+            <sys_updated_on>2018-12-18 22:41:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>city</element>
+            <position>3</position>
+            <sys_created_by>LGOMEZ</sys_created_by>
+            <sys_created_on>2018-12-18 22:41:13</sys_created_on>
+            <sys_id>e0d6e89cdb622b0040f8fcfa0c961967</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_vendor_registration" sys_domain="global" view="Default view">20d6609cdb622b0040f8fcfa0c961908</sys_ui_section>
+            <sys_updated_by>LGOMEZ</sys_updated_by>
+            <sys_updated_on>2018-12-18 22:41:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>email</element>
+            <position>4</position>
+            <sys_created_by>LGOMEZ</sys_created_by>
+            <sys_created_on>2018-12-18 22:41:13</sys_created_on>
+            <sys_id>64d6e89cdb622b0040f8fcfa0c961967</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_vendor_registration" sys_domain="global" view="Default view">20d6609cdb622b0040f8fcfa0c961908</sys_ui_section>
+            <sys_updated_by>LGOMEZ</sys_updated_by>
+            <sys_updated_on>2018-12-18 22:41:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>last_name</element>
+            <position>5</position>
+            <sys_created_by>LGOMEZ</sys_created_by>
+            <sys_created_on>2018-12-18 22:41:13</sys_created_on>
+            <sys_id>e4d6e89cdb622b0040f8fcfa0c961967</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_vendor_registration" sys_domain="global" view="Default view">20d6609cdb622b0040f8fcfa0c961908</sys_ui_section>
+            <sys_updated_by>LGOMEZ</sys_updated_by>
+            <sys_updated_on>2018-12-18 22:41:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>phone_number</element>
+            <position>6</position>
+            <sys_created_by>LGOMEZ</sys_created_by>
+            <sys_created_on>2018-12-18 22:41:13</sys_created_on>
+            <sys_id>68d6e89cdb622b0040f8fcfa0c961967</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_vendor_registration" sys_domain="global" view="Default view">20d6609cdb622b0040f8fcfa0c961908</sys_ui_section>
+            <sys_updated_by>LGOMEZ</sys_updated_by>
+            <sys_updated_on>2018-12-18 22:41:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>logo_inclusion</element>
+            <position>7</position>
+            <sys_created_by>LGOMEZ</sys_created_by>
+            <sys_created_on>2018-12-18 22:41:13</sys_created_on>
+            <sys_id>e8d6e89cdb622b0040f8fcfa0c961967</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_vendor_registration" sys_domain="global" view="Default view">20d6609cdb622b0040f8fcfa0c961908</sys_ui_section>
+            <sys_updated_by>LGOMEZ</sys_updated_by>
+            <sys_updated_on>2018-12-18 22:41:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>raffle_prize</element>
+            <position>8</position>
+            <sys_created_by>LGOMEZ</sys_created_by>
+            <sys_created_on>2018-12-18 22:41:13</sys_created_on>
+            <sys_id>6cd6e89cdb622b0040f8fcfa0c961967</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_vendor_registration" sys_domain="global" view="Default view">20d6609cdb622b0040f8fcfa0c961908</sys_ui_section>
+            <sys_updated_by>LGOMEZ</sys_updated_by>
+            <sys_updated_on>2018-12-18 22:41:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>state</element>
+            <position>9</position>
+            <sys_created_by>LGOMEZ</sys_created_by>
+            <sys_created_on>2018-12-18 22:41:13</sys_created_on>
+            <sys_id>ecd6e89cdb622b0040f8fcfa0c961967</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_sthc_swug_19_vendor_registration" sys_domain="global" view="Default view">20d6609cdb622b0040f8fcfa0c961908</sys_ui_section>
+            <sys_updated_by>LGOMEZ</sys_updated_by>
+            <sys_updated_on>2018-12-18 22:41:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_sthc_swug_19_vendor_registration</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>LGOMEZ</sys_created_by>
+            <sys_created_on>2018-12-18 22:41:13</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_id>20d6609cdb622b0040f8fcfa0c961908</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_sthc_swug_19_vendor_registration</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="SWUG 19" source="x_sthc_swug_19">89eb904ddb71138040f8fcfa0c961950</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="SWUG 19">89eb904ddb71138040f8fcfa0c961950</sys_scope>
+            <sys_update_name>sys_ui_section_20d6609cdb622b0040f8fcfa0c961908</sys_update_name>
+            <sys_updated_by>LGOMEZ</sys_updated_by>
+            <sys_updated_on>2018-12-18 22:41:13</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

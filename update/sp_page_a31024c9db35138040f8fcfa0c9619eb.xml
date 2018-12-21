@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="sp_page">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_page">
     <sp_page action="INSERT_OR_UPDATE">
+        <category>custom</category>
         <css/>
         <draft>false</draft>
-        <id>swug19_index</id>
+        <dynamic_title_structure/>
+        <id>swag19_index</id>
         <internal>false</internal>
         <public>true</public>
         <roles/>
@@ -14,14 +15,14 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_id>a31024c9db35138040f8fcfa0c9619eb</sys_id>
         <sys_mod_count>2</sys_mod_count>
-        <sys_name>swug19_index</sys_name>
+        <sys_name>swag19_index</sys_name>
         <sys_package display_value="SWUG 19" source="x_sthc_swug_19">89eb904ddb71138040f8fcfa0c961950</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="SWUG 19">89eb904ddb71138040f8fcfa0c961950</sys_scope>
         <sys_update_name>sp_page_a31024c9db35138040f8fcfa0c9619eb</sys_update_name>
         <sys_updated_by>LGOMEZ</sys_updated_by>
-        <sys_updated_on>2018-12-11 22:36:17</sys_updated_on>
-        <title>SWUG19</title>
+        <sys_updated_on>2018-12-06 15:51:16</sys_updated_on>
+        <title>SWUG19 Index</title>
     </sp_page>
 </record_update>

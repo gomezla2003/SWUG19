@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Vendor Registration" max_length="40" name="x_sthc_swug_19_vendor_registration" type="collection">
+        <element label="Billing Address" max_length="100" name="billing_address" type="string"/>
+        <element label="City" max_length="100" name="city" type="string"/>
+        <element label="Email" max_length="100" name="email" type="string"/>
+        <element label="First Name" max_length="100" name="first_name" type="string"/>
+        <element label="Last Name" max_length="100" name="last_name" type="string"/>
+        <element label="Logo inclusion" max_length="100" name="logo_inclusion" type="string"/>
+        <element label="Phone Number" max_length="100" name="phone_number" type="string"/>
+        <element label="Raffle Prize" max_length="100" name="raffle_prize" type="string"/>
+        <element label="State" max_length="100" name="state" type="string"/>
+        <element label="Vendor Name" max_length="100" name="vendor_name" type="string"/>
+    </element>
+</database>

@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="gsw_change_log">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="gsw_change_log">
     <gsw_change_log action="INSERT_OR_UPDATE">
         <change_date>2018-08-01 15:34:20</change_date>
         <changed_by display_value="Louie Gomez">9dd736c46fd4710068ceda0cbb3ee476</changed_by>

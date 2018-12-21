@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<database>
+<?xml version="1.0" encoding="UTF-8"?><database>
     <element label="Attending Sessions" max_length="40" name="x_sthc_swug_19_attending_sessions" type="collection">
         <element label="Session" max_length="32" name="session" reference="x_sthc_swug_19_swug19_sessions" type="reference"/>
         <element label="User" max_length="32" name="user" reference="sys_user" type="reference"/>

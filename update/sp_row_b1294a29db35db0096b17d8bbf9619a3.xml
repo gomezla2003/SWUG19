@@ -1,10 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="sp_row">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_row">
     <sp_row action="INSERT_OR_UPDATE">
         <class_name/>
         <order>1</order>
         <sp_column/>
-        <sp_container display_value="SWUG19 - Container 1">85294eaddb35db0096b17d8bbf96196e</sp_container>
+        <sp_container display_value="SWUG19 Index - Container 1">85294eaddb35db0096b17d8bbf96196e</sp_container>
         <sys_class_name>sp_row</sys_class_name>
         <sys_created_by>LGOMEZ</sys_created_by>
         <sys_created_on>2018-05-01 00:04:59</sys_created_on>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_embedded_help_role">
+    <sys_embedded_help_role action="INSERT_OR_UPDATE">
+        <order>1000</order>
+        <role display_value="x_sthc_swug_19.vendor_registration_user" name="x_sthc_swug_19.vendor_registration_user">5765e054db622b0040f8fcfa0c9619bc</role>
+        <sys_class_name>sys_embedded_help_role</sys_class_name>
+        <sys_created_by>LGOMEZ</sys_created_by>
+        <sys_created_on>2018-12-18 22:35:07</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>db65e054db622b0040f8fcfa0c9619be</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>5765e054db622b0040f8fcfa0c9619bc</sys_name>
+        <sys_package display_value="SWUG 19" source="x_sthc_swug_19">89eb904ddb71138040f8fcfa0c961950</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="SWUG 19">89eb904ddb71138040f8fcfa0c961950</sys_scope>
+        <sys_update_name>sys_embedded_help_role_db65e054db622b0040f8fcfa0c9619be</sys_update_name>
+        <sys_updated_by>LGOMEZ</sys_updated_by>
+        <sys_updated_on>2018-12-18 22:35:07</sys_updated_on>
+    </sys_embedded_help_role>
+</record_update>

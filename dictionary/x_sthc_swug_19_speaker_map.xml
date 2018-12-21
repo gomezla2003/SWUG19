@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<database>
+<?xml version="1.0" encoding="UTF-8"?><database>
     <element label="Speaker Map" max_length="40" name="x_sthc_swug_19_speaker_map" type="collection">
         <element label="Session" max_length="32" name="session" reference="x_sthc_swug_19_swug19_sessions" type="reference"/>
         <element label="Speaker" max_length="32" name="speaker" reference="x_sthc_swug_19_swug_users_extended" type="reference"/>

@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update>
+<?xml version="1.0" encoding="UTF-8"?><record_update>
     <sys_ui_section caption="Physician Information" section_id="b8acf315db8adb4096b17d8bbf961904" sys_domain="global" table="x_sthc_swug_19_swug_users_extended" version="3" view="itil">
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>u_practice_name</element>

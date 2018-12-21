@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update>
+<?xml version="1.0" encoding="UTF-8"?><record_update>
     <sys_dictionary action="INSERT_OR_UPDATE" element="comments" table="x_sthc_swug_19_swug19_sessions">
         <active>true</active>
         <array>false</array>
@@ -31,6 +30,8 @@
         <element>comments</element>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
         <internal_type display_value="String">string</internal_type>
         <mandatory>false</mandatory>
         <max_length>2000</max_length>
@@ -53,7 +54,7 @@
         <sys_created_by>LGOMEZ</sys_created_by>
         <sys_created_on>2018-07-06 20:20:17</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>7a44d287db439f0040f8fcfa0c96192e</sys_id>
+        <sys_id>1c465b7adb802380808f68461b9619bb</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Additional Comments</sys_name>
         <sys_package display_value="SWUG 19" source="x_sthc_swug_19">89eb904ddb71138040f8fcfa0c961950</sys_package>
@@ -61,8 +62,8 @@
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="SWUG 19">89eb904ddb71138040f8fcfa0c961950</sys_scope>
         <sys_update_name>sys_dictionary_x_sthc_swug_19_swug19_sessions_comments</sys_update_name>
-        <sys_updated_by>LGOMEZ</sys_updated_by>
-        <sys_updated_on>2018-07-06 20:20:17</sys_updated_on>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2018-09-13 16:26:25</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
