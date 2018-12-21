@@ -215,7 +215,7 @@ function createUser(){
         <sys_created_on>2018-12-18 22:15:29</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>e3e02410db622b0040f8fcfa0c9619df</sys_id>
-        <sys_mod_count>26</sys_mod_count>
+        <sys_mod_count>29</sys_mod_count>
         <sys_name>SWUG Vendor</sys_name>
         <sys_package display_value="SWUG 19" source="x_sthc_swug_19">89eb904ddb71138040f8fcfa0c961950</sys_package>
         <sys_policy/>
@@ -223,7 +223,7 @@ function createUser(){
         <sys_scope display_value="SWUG 19">89eb904ddb71138040f8fcfa0c961950</sys_scope>
         <sys_update_name>sp_widget_e3e02410db622b0040f8fcfa0c9619df</sys_update_name>
         <sys_updated_by>LGOMEZ</sys_updated_by>
-        <sys_updated_on>2018-12-21 17:35:31</sys_updated_on>
+        <sys_updated_on>2018-12-21 17:53:35</sys_updated_on>
         <template><![CDATA[
   
 
@@ -321,12 +321,12 @@ function createUser(){
      <br/>
    Reserve your table for the 2019 SWUGM event.  Table registration fee is $500.
 </h1><br/>
-  SoutWest User Group Vendor Registration<br/></legend>
+  SouthWest User Group Vendor Registration<br/></legend>
   
   <!-- Text input-->
 <div class="form-group">
   <label class="control-label" for="firstName">Vendor Name</label>  
-  <input ng-model="data.vendorName" id="vendorName" name="vendorName" type="text" placeholder="Vender/Business Name" class="form-control input-md" required="">
+  <input ng-model="data.vendorName" id="vendorName" name="vendorName" type="text" placeholder="Vendor/Business Name" class="form-control input-md" required="">
 </div>
 
 <!-- Text input-->
@@ -377,8 +377,6 @@ function createUser(){
   <label class="control-label" for="diet">Dietary Needs</label>
     <select ng-model="data.diet" id="diet" name="diet" class="form-control">
       <option value="1">No Restriction</option>
-      <option value="2">Gluten Free</option>
-      <option value="3">Vegan</option>
       <option value="4">Vegetarian</option>
     </select>
 </div>

@@ -16,21 +16,21 @@
         <scoped_administration>false</scoped_administration>
         <short_description/>
         <source>x_sthc_swug_19</source>
-        <store_correlation_id>REPOAPP0000093812</store_correlation_id>
+        <store_correlation_id>REPOAPP0000093814</store_correlation_id>
         <store_url/>
         <sys_class_name>sys_app</sys_class_name>
         <sys_code/>
         <sys_created_by>LGOMEZ</sys_created_by>
         <sys_created_on>2018-08-24 23:15:10</sys_created_on>
         <sys_id>89eb904ddb71138040f8fcfa0c961950</sys_id>
-        <sys_mod_count>20</sys_mod_count>
+        <sys_mod_count>22</sys_mod_count>
         <sys_updated_by>LGOMEZ</sys_updated_by>
-        <sys_updated_on>2018-12-21 17:38:00</sys_updated_on>
+        <sys_updated_on>2018-12-21 17:59:35</sys_updated_on>
         <template/>
         <trackable>true</trackable>
         <user_role/>
         <vendor/>
         <vendor_prefix/>
-        <version>1.0.6</version>
+        <version>1.0.7</version>
     </sys_app>
 </record_update>
