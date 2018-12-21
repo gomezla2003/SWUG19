@@ -406,7 +406,7 @@ function logUserOut(sessionID){
         <sys_created_on>2018-04-29 03:06:58</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>e68f1c89db35138040f8fcfa0c96191c</sys_id>
-        <sys_mod_count>593</sys_mod_count>
+        <sys_mod_count>594</sys_mod_count>
         <sys_name>swug login</sys_name>
         <sys_package display_value="SWUG 19" source="x_sthc_swug_19">89eb904ddb71138040f8fcfa0c961950</sys_package>
         <sys_policy/>
@@ -414,7 +414,7 @@ function logUserOut(sessionID){
         <sys_scope display_value="SWUG 19">89eb904ddb71138040f8fcfa0c961950</sys_scope>
         <sys_update_name>sp_widget_e68f1c89db35138040f8fcfa0c96191c</sys_update_name>
         <sys_updated_by>LGOMEZ</sys_updated_by>
-        <sys_updated_on>2018-12-12 20:14:54</sys_updated_on>
+        <sys_updated_on>2018-12-21 17:35:56</sys_updated_on>
         <template><![CDATA[<html>
   <body>
     
@@ -440,7 +440,6 @@ function logUserOut(sessionID){
 
 
 
-
 <div id="leftNavigation" class="nav__container">
   <a href="#" target="_blank"><img class="logo" src="image/hh_logo.png"></a>
  
@@ -461,6 +460,10 @@ function logUserOut(sessionID){
           
            <div class="nav__menu-item">
                 <a class="nav__menu-link--undecorated" id="click" href="/swug19?id=swug19_location">Location</a>
+            </div>
+          
+          <div class="nav__menu-item">
+                <a class="nav__menu-link--undecorated" id="click" href="/swug19?id=swug_vendor">Vendor Registration</a>
             </div>
     
         <!--

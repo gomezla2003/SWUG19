@@ -357,7 +357,7 @@ if (input && input.action === "set_sso_destination") {
         <sys_created_on>2018-05-30 14:42:49</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>9f28628bdb9e1b0096b17d8bbf9619a1</sys_id>
-        <sys_mod_count>54</sys_mod_count>
+        <sys_mod_count>55</sys_mod_count>
         <sys_name>SWUG Location</sys_name>
         <sys_package display_value="SWUG 19" source="x_sthc_swug_19">89eb904ddb71138040f8fcfa0c961950</sys_package>
         <sys_policy/>
@@ -365,7 +365,7 @@ if (input && input.action === "set_sso_destination") {
         <sys_scope display_value="SWUG 19">89eb904ddb71138040f8fcfa0c961950</sys_scope>
         <sys_update_name>sp_widget_9f28628bdb9e1b0096b17d8bbf9619a1</sys_update_name>
         <sys_updated_by>LGOMEZ</sys_updated_by>
-        <sys_updated_on>2018-08-17 17:49:57</sys_updated_on>
+        <sys_updated_on>2018-12-21 17:36:40</sys_updated_on>
         <template><![CDATA[<html>
   <body>
     
@@ -412,6 +412,10 @@ if (input && input.action === "set_sso_destination") {
           
            <div class="nav__menu-item">
                 <a class="nav__menu-link--undecorated" id="click" href="/swug19?id=swug19_location">Location</a>
+            </div>
+          
+          <div class="nav__menu-item">
+                <a class="nav__menu-link--undecorated" id="click" href="/swug19?id=swug_vendor">Vendor Registration</a>
             </div>
     
         <!--

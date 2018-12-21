@@ -372,15 +372,15 @@ function createMap(user,session){
         <sys_created_on>2018-05-30 02:45:27</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>36f34407dbd21b0096b17d8bbf961944</sys_id>
-        <sys_mod_count>375</sys_mod_count>
+        <sys_mod_count>376</sys_mod_count>
         <sys_name>SWUG Presentations</sys_name>
         <sys_package display_value="SWUG 19" source="x_sthc_swug_19">89eb904ddb71138040f8fcfa0c961950</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="SWUG 19">89eb904ddb71138040f8fcfa0c961950</sys_scope>
         <sys_update_name>sp_widget_36f34407dbd21b0096b17d8bbf961944</sys_update_name>
-        <sys_updated_by>SHollien</sys_updated_by>
-        <sys_updated_on>2018-10-18 16:28:05</sys_updated_on>
+        <sys_updated_by>LGOMEZ</sys_updated_by>
+        <sys_updated_on>2018-12-21 17:37:18</sys_updated_on>
         <template><![CDATA[<!--
     <link href="http://wenzhixin.net.cn/p/bootstrap-table/src/bootstrap-table.css" rel="stylesheet" type="text/css" />
 
@@ -434,6 +434,10 @@ function createMap(user,session){
           
            <div class="nav__menu-item">
                 <a class="nav__menu-link--undecorated" id="click" href="/swug19?id=swug19_location">Location</a>
+            </div>
+          
+          <div class="nav__menu-item">
+                <a class="nav__menu-link--undecorated" id="click" href="/swug19?id=swug_vendor">Vendor Registration</a>
             </div>
     
         <!--
