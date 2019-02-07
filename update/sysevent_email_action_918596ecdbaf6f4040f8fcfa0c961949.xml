@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_email_action">
+    <sysevent_email_action action="INSERT_OR_UPDATE">
+        <action_insert>true</action_insert>
+        <action_update>false</action_update>
+        <active>true</active>
+        <advanced_condition/>
+        <affected_field_on_event/>
+        <category display_value="Uncategorized" name="Uncategorized">c97d83137f4432005f58108c3ffa917a</category>
+        <collection>x_sthc_swug_19_swug19_sessions</collection>
+        <condition/>
+        <content_type>text/html</content_type>
+        <default_interval/>
+        <description/>
+        <digest_from/>
+        <digest_html/>
+        <digest_reply_to/>
+        <digest_separator_html><![CDATA[<p>&nbsp;</p>
+<hr />
+<p>&nbsp;</p>]]></digest_separator_html>
+        <digest_separator_text><![CDATA[\n--------------------------------------------------------------------------------\n]]></digest_separator_text>
+        <digest_subject/>
+        <digest_template/>
+        <digest_text/>
+        <digestable>false</digestable>
+        <event_name>x_sthc_swug_19.SWUG session approved</event_name>
+        <event_parm_1>true</event_parm_1>
+        <event_parm_2>false</event_parm_2>
+        <exclude_delegates>false</exclude_delegates>
+        <force_delivery>false</force_delivery>
+        <from/>
+        <generation_type>event</generation_type>
+        <importance/>
+        <include_attachments>false</include_attachments>
+        <item>event.parm1</item>
+        <item_table/>
+        <mandatory>false</mandatory>
+        <message/>
+        <message_html><![CDATA[<p>&nbsp;</p>
+<p><img style="hspace: 5px; align: left;" title="HonorHealth" src="hh_logo.pngx" alt="HonorHealth" width="100" height="50" align="left" border="" hspace="5" vspace="" /><span style="font-size: 14pt; font-family: arial, helvetica, sans-serif;">Welcome to South West User Group 2019!</span></p>
+<hr style="height: 2px; border: none; color: #000; background-color: #72246c;" />
+<p>&nbsp;</p>
+<p><span style="font-size: 14pt; font-family: arial, helvetica, sans-serif;"><strong>${speaker} </strong></span></p>
+<p style="margin: 0in 0in 0.0001pt; font-size: 12pt; font-family: 'Times New Roman', serif;"><span style="font-size: 12pt; color: black; font-family: arial, helvetica, sans-serif;">Thank you for your submission to present at the SWUGM 2019 on March 29th in Scottsdale, Arizona. We are pleased to let you know that your presentation has been selected. Congratulations!</span></p>
+<p><span style="font-family: arial, helvetica, sans-serif;">&nbsp;</span></p>
+<p><span style="font-size: 14pt; font-family: arial, helvetica, sans-serif;"><strong>Presentation Info:</strong></span></p>
+<p><span style="font-size: 14pt; font-family: arial, helvetica, sans-serif;"><strong>Topic</strong>: ${topic}<br /></span></p>
+<p><span style="font-size: 14pt; font-family: arial, helvetica, sans-serif;"><strong>Start Time</strong>: ${time}</span></p>
+<p><span style="font-size: 14pt; font-family: arial, helvetica, sans-serif;"><strong>Room</strong>: ${room}</span></p>
+<p>&nbsp;</p>
+<p style="margin: 0in 0in 0.0001pt; font-size: 12pt; font-family: 'Times New Roman', serif;"><span style="font-family: arial, helvetica, sans-serif; font-size: 14pt;"><strong><span style="color: black;">Next Steps:</span></strong></span></p>
+<ul style="margin-bottom: 0in; list-style-position: inside;">
+<li style="font-size: 11pt; font-family: Calibri, sans-serif; color: black;"><span style="font-family: arial, helvetica, sans-serif;">Email your PowerPoint to <a style="color: #0563c1; text-decoration: underline;" href="mailto:SWUGM@honorhealth.com">SWUGM@honorhealth.com</a> by <strong>Wednesday, March 20th</strong> or sooner. </span>
+<ul style="margin-bottom: 0in; list-style-position: inside;" type="circle">
+<li style="font-size: 11pt; font-family: Calibri, sans-serif; color: black;"><span style="font-family: arial, helvetica, sans-serif;">Please include the following in your PowerPoint presentation:</span>
+<ul style="margin-bottom: 0in; list-style-position: inside;">
+<li style="font-size: 11pt; font-family: Calibri, sans-serif; color: black;"><span style="font-family: arial, helvetica, sans-serif;">A list of all presenters with their titles, clinical credentials, and brief summary of work background</span></li>
+<li style="font-size: 11pt; font-family: Calibri, sans-serif; color: black;"><span style="font-family: arial, helvetica, sans-serif;">Contact information for presenters</span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p style="margin: 0in 0in 0.0001pt 81pt; font-size: 12pt; font-family: 'Times New Roman', serif;"><span style="font-family: arial, helvetica, sans-serif;"><a style="color: #0563c1; text-decoration: underline;" href="mailto:SWUGM@honorhealth.com"><span style="font-size: 11pt; color: black;">&nbsp;</span></a></span></p>
+<p style="margin: 0in 0in 0.0001pt; font-size: 12pt; font-family: 'Times New Roman', serif;"><span style="font-family: arial, helvetica, sans-serif; font-size: 14pt;"><strong><span style="color: black;">Additional Information:</span></strong></span></p>
+<p style="margin: 0in 0in 0.0001pt; font-size: 12pt; font-family: 'Times New Roman', serif;"><span style="font-size: 11pt; font-family: arial, helvetica, sans-serif; color: black;">Each room will have a computer and projector with your presentation available for use.</span></p>
+<p style="margin: 0in 0in 0.0001pt; font-size: 12pt; font-family: 'Times New Roman', serif;"><span style="font-size: 11pt; font-family: arial, helvetica, sans-serif; color: black;">If you need additional supplies/materials please reach out to the email listed below</span></p>
+<p style="margin: 0in 0in 0.0001pt; font-size: 12pt; font-family: 'Times New Roman', serif;"><span style="font-size: 11pt; font-family: arial, helvetica, sans-serif; color: black;">&nbsp;</span></p>
+<p style="margin: 0in 0in 0.0001pt; font-size: 12pt; font-family: 'Times New Roman', serif;"><span style="font-family: arial, helvetica, sans-serif; font-size: 14pt;"><strong><span style="color: black;">Any Questions?</span></strong></span></p>
+<p style="margin: 0in 0in 0.0001pt; font-size: 12pt; font-family: 'Times New Roman', serif;"><span style="font-family: arial, helvetica, sans-serif;"><span style="font-size: 11pt; color: black;">Please send an email to</span> <a style="color: #0563c1; text-decoration: underline;" href="mailto:SWUGM@honorhealth.com">SWUGM@honorhealth.com</a> and include the phrase "presenter question" somewhere in the Subject.</span></p>
+<p style="margin: 0in 0in 0.0001pt; font-size: 12pt; font-family: 'Times New Roman', serif;"><span style="font-size: 11pt; font-family: arial, helvetica, sans-serif; color: black;">&nbsp;</span></p>
+<p style="margin: 0in 0in 0.0001pt; font-size: 12pt; font-family: 'Times New Roman', serif;"><span style="font-size: 11pt; font-family: arial, helvetica, sans-serif; color: black;">Thanks again and see you in March!</span></p>
+<p style="margin: 0in 0in 0.0001pt; font-size: 12pt; font-family: 'Times New Roman', serif;"><span style="font-size: 11pt; font-family: arial, helvetica, sans-serif; color: black;">&nbsp;</span></p>
+<p style="margin: 0in 0in 0.0001pt; font-size: 12pt; font-family: 'Times New Roman', serif;"><span style="font-size: 11pt; font-family: arial, helvetica, sans-serif; color: black;">SWUGM 2019 Presenters Committee</span></p>
+<hr style="height: 2px; border: none; color: #000; background-color: #72246c;" />
+<p>&nbsp;</p>
+<p>&nbsp;</p>]]></message_html>
+        <message_list/>
+        <message_text/>
+        <name>SWUG Presentation Approval</name>
+        <omit_watermark>true</omit_watermark>
+        <order>100</order>
+        <push_message_only>false</push_message_only>
+        <recipient_fields/>
+        <recipient_groups/>
+        <recipient_users/>
+        <reply_to>SWUGM@HonorHealth.com </reply_to>
+        <send_self>true</send_self>
+        <sms_alternate/>
+        <style/>
+        <subject>Thank you for your registration to to attend SWUGM 2019</subject>
+        <subscribable>false</subscribable>
+        <sys_class_name>sysevent_email_action</sys_class_name>
+        <sys_created_by>LGOMEZ</sys_created_by>
+        <sys_created_on>2019-02-07 18:26:08</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>918596ecdbaf6f4040f8fcfa0c961949</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>SWUG Presentation Approval</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="SWUG 19" source="x_sthc_swug_19">89eb904ddb71138040f8fcfa0c961950</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="SWUG 19">89eb904ddb71138040f8fcfa0c961950</sys_scope>
+        <sys_update_name>sysevent_email_action_918596ecdbaf6f4040f8fcfa0c961949</sys_update_name>
+        <sys_updated_by>LGOMEZ</sys_updated_by>
+        <sys_updated_on>2019-02-07 18:43:54</sys_updated_on>
+        <sys_version>2</sys_version>
+        <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
+        <type>email</type>
+        <weight>0</weight>
+        <x_ctv_sc_notify_in_connect>false</x_ctv_sc_notify_in_connect>
+    </sysevent_email_action>
+</record_update>

@@ -532,7 +532,7 @@ function removeSession(session,user){
         <sys_created_on>2018-05-04 02:01:45</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>21a08a6adbbddf0096b17d8bbf9619d1</sys_id>
-        <sys_mod_count>727</sys_mod_count>
+        <sys_mod_count>728</sys_mod_count>
         <sys_name>SWUG Sessions</sys_name>
         <sys_package display_value="SWUG 19" source="x_sthc_swug_19">89eb904ddb71138040f8fcfa0c961950</sys_package>
         <sys_policy/>
@@ -540,7 +540,7 @@ function removeSession(session,user){
         <sys_scope display_value="SWUG 19">89eb904ddb71138040f8fcfa0c961950</sys_scope>
         <sys_update_name>sp_widget_21a08a6adbbddf0096b17d8bbf9619d1</sys_update_name>
         <sys_updated_by>LGOMEZ</sys_updated_by>
-        <sys_updated_on>2019-02-05 21:36:44</sys_updated_on>
+        <sys_updated_on>2019-02-07 16:09:19</sys_updated_on>
         <template><![CDATA[<div class="global">
   
 
@@ -716,24 +716,24 @@ function removeSession(session,user){
         <th></th>
       </tr>
       <tr>
-      <td> 7:00am - 8:00am  </td>
+      <td> 7:45am - 8:00am  </td>
       <td> Breakfast </td>
       </tr>
       <tr>
-      <td>9:00am - 12:00pm</td>
-      <td>Break-Out Sessions</td>
+      <td>8:00am - 9:00am</td>
+      <td>Opening Remarks and Keynote Speaker</td>
       </tr>
       <tr>
-      <td>12:00pm - 1:00pm</td>
-      <td>Lunch</td>
+      <td>9:15am - 3:15pm</td>
+      <td>Sessions</td>
       </tr>
        <tr>
-      <td>1:00pm - 3:00pm</td>
-      <td>Break-Out Sessions</td>
+      <td>11:00am - 1:00pm</td>
+      <td>Lunch</td>
       </tr>
           <tr>
-      <td>3:00pm - 5:00pm</td>
-      <td>Final Words</td>
+      <td>3:30pm - 4:00pm</td>
+      <td>Closing Remarks, Wrap-Up, Raffle </td>
       </tr>
     </table>
     

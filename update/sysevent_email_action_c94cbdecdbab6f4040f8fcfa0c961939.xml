@@ -7,9 +7,7 @@
         <affected_field_on_event/>
         <category display_value="Uncategorized" name="Uncategorized">c97d83137f4432005f58108c3ffa917a</category>
         <collection>x_sthc_swug_19_swug_users_extended</collection>
-        <condition table="x_sthc_swug_19_swug_users_extended">emailISNOTEMPTY^EQ<item endquery="false" field="email" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/>
-            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
-        </condition>
+        <condition/>
         <content_type>text/html</content_type>
         <default_interval/>
         <description/>
@@ -24,13 +22,13 @@
         <digest_template/>
         <digest_text/>
         <digestable>false</digestable>
-        <event_name>x_sthc_swug_19.SWUG_registration</event_name>
+        <event_name>x_sthc_swug_19.registration</event_name>
         <event_parm_1>true</event_parm_1>
-        <event_parm_2>true</event_parm_2>
+        <event_parm_2>false</event_parm_2>
         <exclude_delegates>false</exclude_delegates>
         <force_delivery>false</force_delivery>
         <from/>
-        <generation_type>engine</generation_type>
+        <generation_type>event</generation_type>
         <importance/>
         <include_attachments>false</include_attachments>
         <item>event.parm1</item>
@@ -75,7 +73,7 @@
 <p>&nbsp;</p>]]></message_html>
         <message_list/>
         <message_text/>
-        <name>SWUG Registration Confirmation</name>
+        <name>SWUG Registration Confirmation(Event)</name>
         <omit_watermark>true</omit_watermark>
         <order>100</order>
         <push_message_only>false</push_message_only>
@@ -90,20 +88,20 @@
         <subscribable>false</subscribable>
         <sys_class_name>sysevent_email_action</sys_class_name>
         <sys_created_by>LGOMEZ</sys_created_by>
-        <sys_created_on>2019-02-04 21:00:40</sys_created_on>
+        <sys_created_on>2019-02-07 16:35:48</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
-        <sys_id>648a5f27db132b4040f8fcfa0c961928</sys_id>
-        <sys_mod_count>13</sys_mod_count>
-        <sys_name>SWUG Registration Confirmation</sys_name>
+        <sys_id>c94cbdecdbab6f4040f8fcfa0c961939</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>SWUG Registration Confirmation(Event)</sys_name>
         <sys_overrides/>
         <sys_package display_value="SWUG 19" source="x_sthc_swug_19">89eb904ddb71138040f8fcfa0c961950</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="SWUG 19">89eb904ddb71138040f8fcfa0c961950</sys_scope>
-        <sys_update_name>sysevent_email_action_648a5f27db132b4040f8fcfa0c961928</sys_update_name>
+        <sys_update_name>sysevent_email_action_c94cbdecdbab6f4040f8fcfa0c961939</sys_update_name>
         <sys_updated_by>LGOMEZ</sys_updated_by>
-        <sys_updated_on>2019-02-07 16:21:46</sys_updated_on>
+        <sys_updated_on>2019-02-07 17:08:51</sys_updated_on>
         <sys_version>2</sys_version>
         <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
         <type>email</type>
