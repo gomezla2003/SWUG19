@@ -532,7 +532,7 @@ function removeSession(session,user){
         <sys_created_on>2018-05-04 02:01:45</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>21a08a6adbbddf0096b17d8bbf9619d1</sys_id>
-        <sys_mod_count>722</sys_mod_count>
+        <sys_mod_count>727</sys_mod_count>
         <sys_name>SWUG Sessions</sys_name>
         <sys_package display_value="SWUG 19" source="x_sthc_swug_19">89eb904ddb71138040f8fcfa0c961950</sys_package>
         <sys_policy/>
@@ -540,7 +540,7 @@ function removeSession(session,user){
         <sys_scope display_value="SWUG 19">89eb904ddb71138040f8fcfa0c961950</sys_scope>
         <sys_update_name>sp_widget_21a08a6adbbddf0096b17d8bbf9619d1</sys_update_name>
         <sys_updated_by>LGOMEZ</sys_updated_by>
-        <sys_updated_on>2018-06-15 20:22:16</sys_updated_on>
+        <sys_updated_on>2019-02-05 21:36:44</sys_updated_on>
         <template><![CDATA[<div class="global">
   
 
@@ -580,7 +580,7 @@ function removeSession(session,user){
        </div>
   </h3>
  
-         <div class="nav__menu-container">
+        <div class="nav__menu-container">
     
             <div class="nav__menu-item">
                 <a class="nav__menu-link--undecorated" id="click" href="/swug19">Why Attend</a>
@@ -589,19 +589,27 @@ function removeSession(session,user){
            <div class="nav__menu-item">
                 <a class="nav__menu-link--undecorated" id="click" href="/swug19?id=swug19_location">Location</a>
             </div>
+          
+          <div class="nav__menu-item">
+                <a class="nav__menu-link--undecorated" id="click" href="/swug19?id=swug_vendor">Vendor Registration</a>
+            </div>
     
         
             <div class="nav__menu-item">
                 <a class="nav__menu-link--undecorated" href="/swug19?id=swug_sessions">Sessions</a>
 	          </div>
-	            
+	            <!--
             <div class="nav__menu-item">
                 <a class="nav__menu-link--undecorated" href="/sponsors.html">Sponsors</a>
             </div>
           
           <div class="nav__menu-item">
+            <a class="nav__menu-link--undecorated" href="#">FAQ</a>
+            </div>-->
+          <!--
+          <div class="nav__menu-item">
                 <a class="nav__menu-link--undecorated"  href="/swug19?id=swug_presentations">Call for presentations</a>
-            </div>
+            </div>-->
           
             
             
@@ -613,14 +621,14 @@ function removeSession(session,user){
           
           <item ng-if="data.is_logged_in">
             <div class="nav__menu-item"><a class="nav__menu-link--undecorated" href="/swug19?id=swug_myschedule">My Schedule</a><br /></div>
-            <div class="nav__menu-item hand"><a class="nav__menu-link--undecorated" ng-click="c.logout()">${Logout}</a></div>
+            <div class="nav__menu-item hand"><a class="nav__menu-link--undecorated" href="{{::portal.logoutUrl}}">${Logout}</a></div>
           </item>
                 
     
       </div>
   </div>
-  
-     <!-- Login -->
+    
+     
     <div class="login" ng-if="!data.is_logged_in">
       
    
@@ -647,14 +655,8 @@ function removeSession(session,user){
 				<div ng-if="c.message" class="alert alert-danger" role="alert">{{c.message}}</div>
 				<div ng-if="c.success" class="alert alert-success" role="alert">{{c.success}}</div>
 
-				<!--<div ng-if="!c.data.forgetMe" class="checkbox">
-          <label>
-            <input name="c.remember_me" ng-model="c.remember_me" checked="checked" id="remember_me" type="checkbox" class="checkbox" value="true"/> ${Remember me}
-					</label>
-				</div>
--->
         <div>
-          <a href="#"> forgot my password</a>
+          <a href="/swug19?id=swug_reset_password"> forgot my password</a>
         </div>
         <button name="login" type="submit" class="btn btn-lg btn-primary btn-block">
           ${Login}
@@ -693,7 +695,6 @@ function removeSession(session,user){
 	</form>
 </div>
      </div>
-    <!-- End Login -->
   
   
 

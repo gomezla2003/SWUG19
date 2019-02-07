@@ -6,15 +6,18 @@
 	  var c = this;
 
 	c.submit = function(){
+		c.server.update();
+		setTimeout(function(){
+			if(c.data.found)
+			swal("Password has been reset", "Please check your email for your new temporary password", "success");
 		
-		swal(
-  'Thank You',
-  'You have been registered and will be contacted by a member of our team.',
-  'success'
-);
+			else
+				swal("Email not found", "This email has been yet been registered, please register now","error");
+		}, 3000);
+		c.data.found = '';
 		
 		
-	c.server.update();
+	
 	}
 
   
@@ -316,10 +319,10 @@ label[for="password"] {
         <docs/>
         <field_list/>
         <has_preview>false</has_preview>
-        <id>swug_vendor</id>
+        <id>swug_password_reset</id>
         <internal>false</internal>
         <link/>
-        <name>SWUG Vendor</name>
+        <name>SWUG password reset</name>
         <option_schema/>
         <public>true</public>
         <roles/>
@@ -356,8 +359,7 @@ if (input && input.action === "set_sso_destination") {
 	
 if(input){
 	
-	createUser();
-	//gs.addInfoMessage("Thank you " + input.firstName + " " + input.lastName + ". You have been registered");
+	checkUser();
 	
 }
 	
@@ -367,38 +369,34 @@ if(input){
 
 })();
 
-function createUser(){
+function checkUser(){
+	var gr = new GlideRecord("x_sthc_swug_19_swug_users_extended");
+	gr.addQuery('email',input.email);
+	gr.query();
+	while(gr.next()){
+		data.found = true;
+	gr.user_password.setDisplayValue("SWUG19");
+  gr.password_needs_reset = 'true';
+	gr.update();
+	}
 
-	var us = new GlideRecord('x_sthc_swug_19_vendor_registration');
-	us.initialize();
-	us.vendor_name = input.vendorName;
-	us.first_name = input.firstName;
-	us.last_name = input.lastName;
-	us.email = input.email;
-	us.phone_number = input.phone
-	us.billing_address = input.address;
-	us.city = input.city;
-	us.state = input.state;
-	us.raffle_prize = input.raffle;
-	us.logo_inclusion = input.logo;
-	us.insert();
-
-}]]></script>
+}
+]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
         <sys_created_by>LGOMEZ</sys_created_by>
-        <sys_created_on>2018-12-18 22:15:29</sys_created_on>
+        <sys_created_on>2019-02-05 20:57:03</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>e3e02410db622b0040f8fcfa0c9619df</sys_id>
-        <sys_mod_count>41</sys_mod_count>
-        <sys_name>SWUG Vendor</sys_name>
+        <sys_id>d4e46804db27ab4040f8fcfa0c9619d0</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_name>SWUG password reset</sys_name>
         <sys_package display_value="SWUG 19" source="x_sthc_swug_19">89eb904ddb71138040f8fcfa0c961950</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="SWUG 19">89eb904ddb71138040f8fcfa0c961950</sys_scope>
-        <sys_update_name>sp_widget_e3e02410db622b0040f8fcfa0c9619df</sys_update_name>
+        <sys_update_name>sp_widget_d4e46804db27ab4040f8fcfa0c9619d0</sys_update_name>
         <sys_updated_by>LGOMEZ</sys_updated_by>
-        <sys_updated_on>2019-02-05 21:37:04</sys_updated_on>
+        <sys_updated_on>2019-02-05 21:35:12</sys_updated_on>
         <template><![CDATA[
   
 
@@ -560,88 +558,16 @@ function createUser(){
 <legend>
    <h1>
      <br/>
-     <br/>
-   Reserve your table for the 2019 SWUGM event.  Table registration fee is $500.
-</h1><br/>
-  SouthWest User Group Vendor Registration<br/></legend>
+   South West User Group Password Reset
+<br/></h1>
+ </legend>
   
-  <!-- Text input-->
-<div class="form-group">
-  <label class="control-label" for="firstName">Vendor Name</label>  
-  <input ng-model="data.vendorName" id="vendorName" name="vendorName" type="text" placeholder="Vendor/Business Name" class="form-control input-md" required="">
-</div>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="control-label" for="firstName">First Name</label>  
-  <input ng-model="data.firstName" id="firstName" name="firstName" type="text" placeholder="First Name" class="form-control input-md" required="">
-</div>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="control-label" for="lastName">Last Name</label>  
-  <input ng-model="data.lastName" id="lastName" name="lastName" type="text" placeholder="Last Name" class="form-control input-md">
-</div>
 
 <!-- Text input-->
 <div class="form-group">
   <label class="control-label" for="email">E-mail</label>  
-  <input ng-model="data.email" id="email" name="email" type="text" placeholder="E-mail" class="form-control input-md">
+  <input ng-model="data.email" id="email" name="email" type="text" placeholder="Enter your E-mail address" class="form-control input-md">
 </div>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="control-label" for="phone">Phone Number</label>  
-  <input ng-model="data.phone" id="phone" name="phone" type="text" placeholder="Phone Number" class="form-control input-md">
-</div>
-  
-  <!-- Text input-->
-<div class="form-group">
-  <label class="control-label" for="phone">Billing Address</label>  
-  <input ng-model="data.address" id="address" name="address" type="text" placeholder="Billing Address" class="form-control input-md">
-</div>
-  
-    <!-- Text input-->
-<div class="form-group">
-  <label class="control-label" for="phone">City</label>  
-  <input ng-model="data.city" id="city" name="city" type="text" placeholder="City" class="form-control input-md">
-</div>
-  
-      <!-- Text input-->
-<div class="form-group">
-  <label class="control-label" for="phone">State</label>  
-  <input ng-model="data.state" id="state" name="state" type="text" placeholder="State" class="form-control input-md">
-</div>
-  
-  
-   <!-- Select Basic -->
-  <div class="form-group">
-  <label class="control-label" for="diet">Dietary Needs</label>
-    <select ng-model="data.diet" id="diet" name="diet" class="form-control">
-      <option value="1">No Restriction</option>
-      <option value="4">Vegetarian</option>
-    </select>
-</div>
-  
-  
-    <!-- Select Basic -->
-  <div class="form-group">
-  <label class="control-label" for="raffle">Raffle prize participatation?</label>
-    <select ng-model="data.raffle" id="raffle" name="raffle" class="form-control">
-      <option value="Yes">Yes</option>
-      <option value="No">No</option>
-    </select>
-</div>
-  
-      <!-- Select Basic -->
-  <div class="form-group">
-  <label class="control-label" for="role">Logo inclusion on banners?</label>
-    <select ng-model="data.logo" id="logo" name="logo" class="form-control">
-      <option value="Yes">Yes</option>
-      <option value="No">No</option>
-    </select>
-</div>
-
 
 </fieldset>
       

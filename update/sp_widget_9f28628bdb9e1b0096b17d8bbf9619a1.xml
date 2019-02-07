@@ -171,7 +171,7 @@
   top:40px;
   left:0;
   width:300px;
-  height: 350px;
+  height: 450px;
   background-color:#fff;
   z-index:20;
   -webkit-box-shadow:0 .5rem 2.5rem .6rem rgba(0,0,0,.25);
@@ -326,7 +326,7 @@ data.is_logged_in = gs.getSession().isLoggedIn();
 data.errorMsg = gs.getMessage("There was an error processing your request");
 data.errorMsg2 = gs.getMessage("An error has occurred - please contact your system administrator");
 data.passwordMsg = gs.getMessage("Password");
-data.usernameMsg = gs.getMessage("User name");
+data.usernameMsg = gs.getMessage("E-Mail");
 
 //var util = new GlideSPUtil();
 
@@ -357,7 +357,7 @@ if (input && input.action === "set_sso_destination") {
         <sys_created_on>2018-05-30 14:42:49</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>9f28628bdb9e1b0096b17d8bbf9619a1</sys_id>
-        <sys_mod_count>55</sys_mod_count>
+        <sys_mod_count>60</sys_mod_count>
         <sys_name>SWUG Location</sys_name>
         <sys_package display_value="SWUG 19" source="x_sthc_swug_19">89eb904ddb71138040f8fcfa0c961950</sys_package>
         <sys_policy/>
@@ -365,7 +365,7 @@ if (input && input.action === "set_sso_destination") {
         <sys_scope display_value="SWUG 19">89eb904ddb71138040f8fcfa0c961950</sys_scope>
         <sys_update_name>sp_widget_9f28628bdb9e1b0096b17d8bbf9619a1</sys_update_name>
         <sys_updated_by>LGOMEZ</sys_updated_by>
-        <sys_updated_on>2018-12-21 17:36:40</sys_updated_on>
+        <sys_updated_on>2019-02-05 21:35:50</sys_updated_on>
         <template><![CDATA[<html>
   <body>
     
@@ -418,11 +418,11 @@ if (input && input.action === "set_sso_destination") {
                 <a class="nav__menu-link--undecorated" id="click" href="/swug19?id=swug_vendor">Vendor Registration</a>
             </div>
     
-        <!--
+        
             <div class="nav__menu-item">
                 <a class="nav__menu-link--undecorated" href="/swug19?id=swug_sessions">Sessions</a>
 	          </div>
-	            
+	            <!--
             <div class="nav__menu-item">
                 <a class="nav__menu-link--undecorated" href="/sponsors.html">Sponsors</a>
             </div>
@@ -430,13 +430,13 @@ if (input && input.action === "set_sso_destination") {
           <div class="nav__menu-item">
             <a class="nav__menu-link--undecorated" href="#">FAQ</a>
             </div>-->
-          
+          <!--
           <div class="nav__menu-item">
                 <a class="nav__menu-link--undecorated"  href="/swug19?id=swug_presentations">Call for presentations</a>
-            </div>
+            </div>-->
           
             
-            <!--
+            
                   <item ng-if="data.is_logged_in == false" class="nav__menu-item">
                <div class="nav__menu-item">
                  <a class="nav__menu-link--undecorated" href="/swug19?id=swug_registration">Registration</a><br />
@@ -447,13 +447,12 @@ if (input && input.action === "set_sso_destination") {
             <div class="nav__menu-item"><a class="nav__menu-link--undecorated" href="/swug19?id=swug_myschedule">My Schedule</a><br /></div>
             <div class="nav__menu-item hand"><a class="nav__menu-link--undecorated" href="{{::portal.logoutUrl}}">${Logout}</a></div>
           </item>
-                -->
+                
     
       </div>
   </div>
     
-    <!-- Login -->
-    <!--
+     Login 
     <div class="login" ng-if="!data.is_logged_in">
       
    
@@ -479,16 +478,9 @@ if (input && input.action === "set_sso_destination") {
 
 				<div ng-if="c.message" class="alert alert-danger" role="alert">{{c.message}}</div>
 				<div ng-if="c.success" class="alert alert-success" role="alert">{{c.success}}</div>
--->
-				<!--<div ng-if="!c.data.forgetMe" class="checkbox">
-          <label>
-            <input name="c.remember_me" ng-model="c.remember_me" checked="checked" id="remember_me" type="checkbox" class="checkbox" value="true"/> ${Remember me}
-					</label>
-				</div>
--->
-    <!--
+
         <div>
-          <a href="#"> forgot my password</a>
+          <a href="/swug19?id=swug_reset_password"> forgot my password</a>
         </div>
         <button name="login" type="submit" class="btn btn-lg btn-primary btn-block">
           ${Login}
@@ -527,8 +519,6 @@ if (input && input.action === "set_sso_destination") {
 	</form>
 </div>
      </div>
--->
-    <!-- End Login -->
     
     
     
@@ -547,8 +537,7 @@ if (input && input.action === "set_sso_destination") {
       </h1>
       <h3>9003 E Shea Blvd, Scottsdale AZ, 85260 </h3>
       <h3><li> Brady Conference Center</li></h3>
-      <h3><li><a href="https://shcdev.service-now.com/sys_attachment.do?sys_id=4395478bdb125b0096b17d8bbf961967" download="map" target="_blank">Scottsdale Shea Medical Center Campus Parking Map</a></li></h3>
-      <h3><li><a href="https://shcdev.service-now.com/sys_attachment.do?sys_id=d38a594adb33d38096b17d8bbf96197b" download="map" target="_blank">Scottsdale Shea Medical Center Campus Meeting Room Map</a></li></h3>
+      <h3><li><a href="https://shc.service-now.com/sys_attachment.do?sys_id=f75db322db572bc0808f68461b96193a" download="map" target="_blank">Scottsdale Shea Medical Center Parking & Meeting Room Map</a></li></h3>
       <h3><li><a href="https://www.google.com/search?safe=active&rlz=1C1GCEA_enUS780US780&rlla=0&hotel_dates=2019-03-28%2C2019-03-29&tbm=lcl&ei=ytsOW46KFJLw9AOW-YOQCw&hotel_occupancy=2&q=hotels+near+honorhealth+scottsdale+shea+medical+center&oq=hotels+near+honorhealth+scottsdale+shea+medical+center&gs_l=psy-ab.3..33i22i29i30k1l10.103466.114359.0.115409.53.31.1.12.12.0.328.3733.0j12j6j1.19.0....0...1c.1.64.psy-ab..23.29.3144...0j0i22i30k1j33i160k1j0i22i10i30k1j33i21k1.0.kJGRZHg2Uc8#rlfi=hd:2019-03-29,2019-03-30;si:;mv:!1m3!1d49377.04460423796!2d-111.90407059999998!3d33.57620975!2m3!1f0!2f0!3f0!3m2!1i379!2i713!4f13.1;tbs:lf_hd:-1,lf_ho:2,lrf:!1m4!1u13!2m2!13m1!1b1!1m4!1u10!2m2!11m1!1e4!1m4!1u10!2m2!11m1!1e5!1m4!1u10!2m2!11m1!1e9!1m4!1u10!2m2!11m1!1e10!1m4!1u10!2m2!11m1!1e2!1m4!1u10!2m2!11m1!1e3!2m21!1e7!4m4!7m3!1m1!1u75!3sUSD!4m4!7m3!1m1!1u125!3sUSD!4m4!7m3!1m1!1u150!3sUSD!4m4!7m3!1m1!1u175!3sUSD!2m1!1e2!2m1!1e4!2m1!1e13!2m19!1e10!4m2!11m1!1e4!4m2!11m1!1e5!4m2!11m1!1e9!4m2!11m1!1e10!4m2!11m1!1e2!4m2!11m1!1e3!2m7!1e17!4m2!17m1!1e3!4m2!17m1!1e8!3sIAE,lf:1,lf_ui:6" target="_blank">Hotels Near Shea Medical Center</a></li></h3>
         
       

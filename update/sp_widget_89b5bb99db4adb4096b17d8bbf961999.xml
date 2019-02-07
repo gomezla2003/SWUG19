@@ -1,16 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
-        <client_script><![CDATA[function($scope,$sce) {
+        <client_script><![CDATA[function($scope, $http, $window, $location, glideUserSession, glideSystemProperties, spUtil) {
   /* widget controller */
 	  var c = this;
 
 	c.submit = function(){
 		
 	c.server.update();
+		swal("Thank You!", "Please check your email for your registration details and password", "success");
 	}
 
-  
+  c.login = function(username, password) {
+			
+		var url = spUtil.getURL({sysparm_type: 'view_form.login'});
+		
+		// If the page isn't public then the id in the
+		// url won't match the rendered page id.
+		var pageId = $location.search().id || $scope.page.id;
+		var isLoginPage = $scope.portal.login_page_dv == pageId;
+
+		return $http({
+			method: 'post',
+			url: url,
+			data: $.param({
+				'sysparm_type': 'login',
+				'ni.nolog.user_password': true,
+				'remember_me': !!c.remember_me ? true : false,
+				'user_name': username,
+				'user_password': password,
+				'get_redirect_url': true,
+				'sysparm_goto_url': isLoginPage ? null : $location.url()
+			}),
+			headers: {
+				'Content-Type': 'application/x-www-form-urlencoded'
+			}
+		}).then(function(response) {
+			if (!response.data) {
+				c.message = $scope.data.errorMsg;
+				return;
+			}
+
+			if (response.data.status == 'success') {
+				c.success = response.data.message;
+				//$window.location = response.data.redirect_url;
+				$window.location = '/swug19';
+			} else {
+				// wrong username or password
+				c.message = response.data.message;
+				c.password = "";
+				c.username = "";
+				angular.element("#username").focus();
+			}
+
+		}, function errorCallback(response) {
+			// error
+			c.message = $scope.data.errorMsg;
+		});
+	};
+
+	c.externalLogin = function() {
+		c.server.get({
+			action: "set_sso_destination",
+			pageURI: c.data.pageURI
+		}).then(function() {
+			glideSystemProperties.set("glide.authenticate.multisso.enabled", true);
+
+			glideUserSession.getSsoRedirectUrlForUsername(c.username)
+				.then(function(url) {
+					$window.location = url;
+				}, function(err) {
+					spUtil.addErrorMessage($scope.data.errorMsg2);
+				});
+		});
+	}
+
+	c.setExternalLogin = function(newVal) {
+		c.externalLoginMode = newVal;
+	}
+	
+	
+	$("#click").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#adgenda").offset().top
+    }, 2000);
+});
 				 
 				 
 	}
@@ -18,11 +92,19 @@
 	
 ]]></client_script>
         <controller_as>c</controller_as>
-        <css>
+        <css>#leftNavigation{
+  //position: fixed;
+}
+
+.fixed{
+ 
+}
+
 // COLOR BAR
 .global__accent-bar{
-  //position: fixed;
+  position: fixed;
   display:-webkit-box;display:-ms-flexbox;
+  display:flex;
   -webkit-box-orient:horizontal;
   -webkit-box-direction:normal;
   -ms-flex-direction:row;
@@ -34,10 +116,9 @@
   align-items:flex-start;
   overflow:hidden;
   left:0;
-  width:100%;
-  position:absolute;
+  width:100%;position:
+    absolute
 }
-
 .global__accent-bar span{
   display:block;
   width:20%;
@@ -61,6 +142,13 @@
     display:flex;
     left:-60%}}
 
+//hand
+.hand{
+  cursor: pointer;
+}
+
+
+
 //Logo
 .logo{
   float: left;
@@ -80,11 +168,11 @@
 
 
 .nav__container{
-  //position:relative;
+  position:relative;
   top:40px;
   left:0;
   width:300px;
-  height: 500px;
+  height: 450px;
   background-color:#fff;
   z-index:20;
   -webkit-box-shadow:0 .5rem 2.5rem .6rem rgba(0,0,0,.25);
@@ -111,7 +199,9 @@
 
 .nav__menu-container .nav__menu-item{
   border-top:.1rem solid #f2f2f2;
-  padding:.4rem 0;text-transform:uppercase}
+  padding:.4rem 0;
+  text-transform:uppercase}
+
 
 .nav__menu-container .nav__menu-link--undecorated{
       color:gray;
@@ -122,21 +212,93 @@
 .nav__menu-container .nav__menu-link--undecorated:hover{
   color:#000}
 
-//Button
-.btn-submit{
-	position: relative;
-	width: 170px;
-	height: 50px;
-	line-height: 50px;
-	border-radius: 30px;
-	border: 3px solid #1ECD97;
-	background-color: transparent;
-	text-align: center;
-	color: #1ECD97;
-	font-size: 1.2em;
-	transition: all .3s ease-in;
-	-webkit-transition: all .3s ease-in;
-	cursor:pointer;
+//ATTEND
+
+.center{
+   width:90%;
+  margin: auto;
+  
+}
+
+
+
+
+.image{
+  width:90%;
+  margin: auto;
+  -webkit-box-shadow:0 .5rem 2.5rem .6rem rgba(0,0,0,.25);
+  box-shadow:0 .5rem 2.5rem .6rem rgba(0,0,0,.25);
+  -webkit-transition:all 2s ease;
+  transition:all 2s ease;
+}
+#content{
+  width:90%;
+  background: rgb(255, 184, 28);
+  margin: auto;
+  -webkit-box-shadow:0 .5rem 2.5rem .6rem rgba(0,0,0,.25);
+  box-shadow:0 .5rem 2.5rem .6rem rgba(0,0,0,.25);
+  -webkit-transition:all 2s ease;
+  transition:all 2s ease;  
+}
+
+.mainContainer{
+  float:right;
+  width: 80%;
+  padding-top:30px;
+  margin-top: -330px;
+}
+
+@media screen and (max-width:999px)  {
+  .mainContainer{
+    margin-top:10px;
+    float:none;
+    width: 100%;
+  } }
+
+
+.text{
+  margin: 30px;
+  padding-top:15px;
+  //color: #72246c;
+  color: #000;
+  padding-bottom:20px;
+}
+.text h1{
+  border-bottom: 5px solid red;
+}
+.text a{
+  color:#0B0080;
+}
+.text a:hover{
+  color:#CC2200;
+}
+
+
+//LOGIN
+.set-login-type-link {
+  margin-top: 10px;
+  display: block;
+ 
+}
+
+.form-control,
+label[for="username"],
+label[for="password"] {
+	color: black;
+}
+
+.btn {
+	font-weight: 600;
+  font-size: 2.0rem;
+  background-color: #176AAD;
+  border-color: #0B4E85;
+}
+.login{
+  //position: relative;
+  display:block;
+  width: 300px;
+  float: left;
+  margin-top: 60px;
 }
 .form{
   float:right;
@@ -152,6 +314,8 @@
     width: 95%
   }
   
+
+
   </css>
         <data_table>sp_instance</data_table>
         <demo_data/>
@@ -172,10 +336,37 @@
 	
 data.is_logged_in = gs.getSession().isLoggedIn();
 	
-if(input){
+		//We don't want to set a starting page until we've begun the login process.
+data.errorMsg = gs.getMessage("There was an error processing your request");
+data.errorMsg2 = gs.getMessage("An error has occurred - please contact your system administrator");
+data.passwordMsg = gs.getMessage("Password");
+data.usernameMsg = gs.getMessage("E-Mail");
+
+//var util = new GlideSPUtil();
+
+if (input && input.action === "set_sso_destination") {
+	var gs_nav_to = gs.getSession().getProperty("nav_to");
+	gs.getSession().putProperty("nav_to", null);
+
+	if (!gs.getSession().getProperty("starting_page"))
+		gs.getSession().putProperty("starting_page", gs_nav_to);
+
+	return;
+}
+	//data.forgetMe = GlideProperties.getBoolean("glide.ui.forgetme");
+	//data.forgetMeDefault = GlideProperties.getBoolean('glide.ui.remember.me.default', true);
+	data.is_logged_in = gs.getSession().isLoggedIn();
+	var bypass_sso = options.bypass_sso == "true";
+	//data.multisso_enabled = !bypass_sso && GlideProperties.getBoolean("glide.authenticate.multisso.enabled");			
+	//data.default_idp = GlideProperties.get("glide.authenticate.sso.redirect.idp");
+	//data.pageURI = util.getPageUri();
 	
+	
+	
+	
+if(input){
 	createUser();
-	gs.addInfoMessage("Thank you " + input.firstName + " " + input.lastName + ". You have been registered");
+	//gs.addInfoMessage("Thank you " + input.firstName + " " + input.lastName + ". You have been registered");
 	
 }
 	
@@ -184,6 +375,21 @@ if(input){
 	
 
 })();
+
+function checkExisiting(){
+	var gr = new GlideRecord('x_sthc_swug_19_swug_users_extended');
+	gr.addQuery('email',input.email);
+	gr.query();
+	if(gr.next()){
+		gr.hospital = input.hospital;
+		gr.password_needs_reset = 'true';
+		gr.swug_role = input.role;
+		gr.user_password.setDisplayValue("SWUG19");
+		gr.area_of_interest = input.app;
+	  gr.dietary_needs = input.diet;
+	}
+	
+}
 
 function createUser(){
 	var us = new GlideRecord('x_sthc_swug_19_swug_users_extended');
@@ -194,7 +400,11 @@ function createUser(){
 	us.mobile_phone = input.phone
 	us.hospital = input.hospital;
 	us.password_needs_reset = 'true';
+	us.swug_role = input.role;
+	us.user_password.setDisplayValue("SWUG19");
 	us.user_name = input.email;
+	us.area_of_interest = input.app;
+	us.dietary_needs = input.diet;
 	var user = us.insert();
 	
 	var rl = new GlideRecord('sys_user_has_role');
@@ -210,7 +420,7 @@ function createUser(){
         <sys_created_on>2018-05-12 23:36:28</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>89b5bb99db4adb4096b17d8bbf961999</sys_id>
-        <sys_mod_count>68</sys_mod_count>
+        <sys_mod_count>94</sys_mod_count>
         <sys_name>SWUG register</sys_name>
         <sys_package display_value="SWUG 19" source="x_sthc_swug_19">89eb904ddb71138040f8fcfa0c961950</sys_package>
         <sys_policy/>
@@ -218,7 +428,7 @@ function createUser(){
         <sys_scope display_value="SWUG 19">89eb904ddb71138040f8fcfa0c961950</sys_scope>
         <sys_update_name>sp_widget_89b5bb99db4adb4096b17d8bbf961999</sys_update_name>
         <sys_updated_by>LGOMEZ</sys_updated_by>
-        <sys_updated_on>2018-12-21 17:37:01</sys_updated_on>
+        <sys_updated_on>2019-02-05 21:36:28</sys_updated_on>
         <template><![CDATA[
   
 
@@ -243,7 +453,7 @@ function createUser(){
   </div>
 
 
- <div id="leftNavigation" class="nav__container">
+<div id="leftNavigation" class="nav__container">
   <a href="#" target="_blank"><img class="logo" src="image/hh_logo.png"></a>
  
 <h3>
@@ -269,11 +479,11 @@ function createUser(){
                 <a class="nav__menu-link--undecorated" id="click" href="/swug19?id=swug_vendor">Vendor Registration</a>
             </div>
     
-        <!--
+        
             <div class="nav__menu-item">
                 <a class="nav__menu-link--undecorated" href="/swug19?id=swug_sessions">Sessions</a>
 	          </div>
-	            
+	            <!--
             <div class="nav__menu-item">
                 <a class="nav__menu-link--undecorated" href="/sponsors.html">Sponsors</a>
             </div>
@@ -281,13 +491,13 @@ function createUser(){
           <div class="nav__menu-item">
             <a class="nav__menu-link--undecorated" href="#">FAQ</a>
             </div>-->
-          
+          <!--
           <div class="nav__menu-item">
                 <a class="nav__menu-link--undecorated"  href="/swug19?id=swug_presentations">Call for presentations</a>
-            </div>
+            </div>-->
           
             
-            <!--
+            
                   <item ng-if="data.is_logged_in == false" class="nav__menu-item">
                <div class="nav__menu-item">
                  <a class="nav__menu-link--undecorated" href="/swug19?id=swug_registration">Registration</a><br />
@@ -298,10 +508,78 @@ function createUser(){
             <div class="nav__menu-item"><a class="nav__menu-link--undecorated" href="/swug19?id=swug_myschedule">My Schedule</a><br /></div>
             <div class="nav__menu-item hand"><a class="nav__menu-link--undecorated" href="{{::portal.logoutUrl}}">${Logout}</a></div>
           </item>
-                -->
+                
     
       </div>
   </div>
+    
+     Login 
+    <div class="login" ng-if="!data.is_logged_in">
+      
+   
+    <div >
+  <form ng-if="!c.externalLoginMode" class="form-signin" ng-submit="c.login(c.username, c.password)" method="post">
+		<div ng-class="{'panel panel-default': c.options.show_panel}">
+			<div ng-if="c.options.show_panel" class="panel-heading">	      
+				<h3 class="panel-title">${Login}</h3>
+			</div>
+
+			<div ng-class="{'panel-body': c.options.show_panel}">
+
+				<div class="list-group list-group-sm">
+					<div class="list-group-item">
+            <label for="username" class="sr-only">{{::data.usernameMsg}}</label>
+            <input id="username" name="username" autocapitalize="off" ng-keypress="c.message = ''" ng-click="c.message = ''" class="form-control no-border" type="text" placeholder='{{::data.usernameMsg}}' autofocus="true" ng-model="c.username"/>
+					</div>
+					<div class="list-group-item">
+            <label for="password" class="sr-only">{{::data.passwordMsg}}</label>
+            <input id="password" name="password" ng-keypress="c.message = ''" ng-click="c.message = ''" class="form-control no-border" type="password" placeholder='{{::data.passwordMsg}}' ng-model="c.password"/>
+					</div>
+				</div>
+
+				<div ng-if="c.message" class="alert alert-danger" role="alert">{{c.message}}</div>
+				<div ng-if="c.success" class="alert alert-success" role="alert">{{c.success}}</div>
+
+        <div>
+          <a href="/swug19?id=swug_reset_password"> forgot my password</a>
+        </div>
+        <button name="login" type="submit" class="btn btn-lg btn-primary btn-block">
+          ${Login}
+        </button>
+
+        <a ng-if="data.multisso_enabled"
+           class="set-login-type-link"
+           href="javascript:void(0)"
+           ng-click="c.setExternalLogin(true)">${Use external login}</a>
+			</div>
+		</div>
+	</form>
+	<form ng-if="c.externalLoginMode" class="form-signin" ng-submit="c.externalLogin()" method="post">
+		<div ng-class="{'panel panel-default': c.options.show_panel}">
+			<div ng-if="c.options.show_panel" class="panel-heading">
+				<h3 class="panel-title">${External Login}</h3>
+			</div>
+
+			<div ng-class="{'panel-body': c.options.show_panel}">
+				<div class="list-group list-group-sm">
+					<div class="list-group-item">
+            <label for="username" class="sr-only">${User ID}</label>
+            <input id="username" name="username" ng-click="message = ''" class="form-control no-border" type="text" placeholder='${User ID}' autofocus="true" ng-model="c.username"/>
+					</div>
+				</div>
+
+        <button name="login" type="submit" class="btn btn-lg btn-primary btn-block">
+          ${Submit}
+        </button>
+
+        <a href="javascript:void(0)"
+           class="set-login-type-link"
+           ng-click="c.setExternalLogin(false)">${Use internal login}</a>
+			</div>
+		</div>
+	</form>
+</div>
+     </div>
 
 
  
@@ -309,7 +587,7 @@ function createUser(){
 <fieldset>
 
 <!-- Form Name -->
-<legend>SoutWest User Group Registration</legend>
+<h1><legend>SoutWest User Group Registration</legend></h1>
 
 <!-- Text input-->
 <div class="form-group">
@@ -345,14 +623,14 @@ function createUser(){
   <div class="form-group">
   <label class="control-label" for="role">Role</label>
     <select ng-model="data.role" id="role" name="role" class="form-control">
-      <option value="1">Analyst</option>
-      <option value="2">Application Manager</option>
-      <option value="3">Clinical Staff</option>
-      <option value="4">Executive</option>
-      <option value="5">Informatics</option>
-      <option value="6">Infrastructure</option>
-      <option value="7">Instructional Designer</option>
-      <option value="8">Project Manager</option>
+      <option value="Analyst">Analyst</option>
+      <option value="Application Manager">Application Manager</option>
+      <option value="Clinical Staff">Clinical Staff</option>
+      <option value="Executive">Executive</option>
+      <option value="Informatics">Informatics</option>
+      <option value="Infrastructure">Infrastructure</option>
+      <option value="Instructional Designer">Instructional Designer</option>
+      <option value="Project Manager">Project Manager</option>
     </select>
 </div>
   
@@ -368,30 +646,30 @@ function createUser(){
 <div class="form-group">
   <label class="control-label" for="selectmultiple">Area of Interest (Hold 'CTRL' to select multple)</label>
     <select size="8" ng-model="data.app" id="app" name="app" class="form-control" multiple="multiple">
-      <option value="1">ADT</option>
-      <option value="2">Ambulatory</option>
-      <option value="3">ASAP</option>
-      <option value="4">Beaker</option>
-      <option value="5">Canto & Haiku</option>
-      <option value="6">HIM</option>
-      <option value="7">HomeHealth</option>
-      <option value="8">Infrastructure</option>
-      <option value="9">Inpatient</option>
-      <option value="10">Interfaces</option>
-      <option value="11">Meaningful Use</option>
-      <option value="12">MyChart</option>
-      <option value="13">Optime</option>
-      <option value="14">Orders</option>
-      <option value="15">Physicians</option>
-      <option value="16">Process Improvement</option>
-      <option value="17">Radiant</option>
-      <option value="18">Reporting</option>
-      <option value="19">Rover</option>
-      <option value="20">Security</option>
-      <option value="21">Stork</option>
-      <option value="22">Training</option>
-      <option value="23">Willow</option>
-      <option value="24">Wisdom</option>
+      <option value="ADT">ADT</option>
+      <option value="Ambulatory">Ambulatory</option>
+      <option value="ASAP">ASAP</option>
+      <option value="Beaker">Beaker</option>
+      <option value="Canto & Haiku">Canto & Haiku</option>
+      <option value="HIM">HIM</option>
+      <option value="HomeHealth">HomeHealth</option>
+      <option value="Infrastructure">Infrastructure</option>
+      <option value="Inpatient">Inpatient</option>
+      <option value="Interfaces">Interfaces</option>
+      <option value="Meaningful Use">Meaningful Use</option>
+      <option value="MyChart">MyChart</option>
+      <option value="Optime">Optime</option>
+      <option value="Orders">Orders</option>
+      <option value="Physicians">Physicians</option>
+      <option value="Process Improvement">Process Improvement</option>
+      <option value="Radiant">Radiant</option>
+      <option value="Reporting">Reporting</option>
+      <option value="Rover">Rover</option>
+      <option value="Security">Security</option>
+      <option value="Stork">Stork</option>
+      <option value="Training">Training</option>
+      <option value="Willow">Willow</option>
+      <option value="Wisdom">Wisdom</option>
       
       
     </select>
@@ -403,10 +681,8 @@ function createUser(){
   <div class="form-group">
   <label class="control-label" for="diet">Dietary Needs</label>
     <select ng-model="data.diet" id="diet" name="diet" class="form-control">
-      <option value="1">No Restriction</option>
-      <option value="2">Gluten Free</option>
-      <option value="3">Vegan</option>
-      <option value="4">Vegetarian</option>
+      <option value="No Restriction">No Restriction</option>
+      <option value="Vegetarian">Vegetarian</option>
     </select>
 </div>
 

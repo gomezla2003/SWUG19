@@ -72,6 +72,7 @@ var BrowserPrint=function(){function e(e){return s+e}function n(e,n){var i=new X
         <sys_updated_by>LGOMEZ</sys_updated_by>
         <sys_updated_on>2018-07-26 15:21:12</sys_updated_on>
         <table>x_sthc_swug_19_swug_users</table>
+        <u_ctv>false</u_ctv>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>
     </sys_ui_action>

@@ -83,5 +83,6 @@
         <template/>
         <type>email</type>
         <weight>5</weight>
+        <x_ctv_sc_notify_in_connect>false</x_ctv_sc_notify_in_connect>
     </sysevent_email_action>
 </record_update>

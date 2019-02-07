@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_email_action">
+    <sysevent_email_action action="INSERT_OR_UPDATE">
+        <action_insert>true</action_insert>
+        <action_update>false</action_update>
+        <active>true</active>
+        <advanced_condition/>
+        <affected_field_on_event/>
+        <category display_value="Uncategorized" name="Uncategorized">c97d83137f4432005f58108c3ffa917a</category>
+        <collection>x_sthc_swug_19_swug_users_extended</collection>
+        <condition/>
+        <content_type>text/html</content_type>
+        <default_interval/>
+        <description/>
+        <digest_from/>
+        <digest_html/>
+        <digest_reply_to/>
+        <digest_separator_html><![CDATA[<p>&nbsp;</p>
+<hr />
+<p>&nbsp;</p>]]></digest_separator_html>
+        <digest_separator_text><![CDATA[\n--------------------------------------------------------------------------------\n]]></digest_separator_text>
+        <digest_subject/>
+        <digest_template/>
+        <digest_text/>
+        <digestable>false</digestable>
+        <event_name>x_sthc_swug_19.SWUG_registration</event_name>
+        <event_parm_1>true</event_parm_1>
+        <event_parm_2>true</event_parm_2>
+        <exclude_delegates>false</exclude_delegates>
+        <force_delivery>false</force_delivery>
+        <from/>
+        <generation_type>engine</generation_type>
+        <importance/>
+        <include_attachments>false</include_attachments>
+        <item>event.parm1</item>
+        <item_table/>
+        <mandatory>false</mandatory>
+        <message/>
+        <message_html><![CDATA[<p>&nbsp;</p>
+<p><img style="hspace: 5px; align: left;" title="HonorHealth" src="hh_logo.pngx" alt="HonorHealth" width="170" height="50" align="left" border="" hspace="5" vspace="" /><span style="font-size: 14pt; font-family: arial, helvetica, sans-serif;">Welcome to South West User Group 2019!</span></p>
+<hr style="height: 2px; border: none; color: #000; background-color: #72246c;" />
+<p>&nbsp;</p>
+<p><span style="font-size: 14pt; font-family: arial, helvetica, sans-serif;"><strong>${name}<br /> </strong></span></p>
+<p style="margin: 0in 0in 0.0001pt; font-size: 12pt; font-family: 'Times New Roman', serif;"><span style="font-size: 12pt; color: black; font-family: arial, helvetica, sans-serif;">Thank you for registering for Epic South West User Group 2019!</span></p>
+<p style="margin: 0in 0in 0.0001pt; font-size: 12pt; font-family: 'Times New Roman', serif;"><span style="font-size: 12pt; color: black; font-family: arial, helvetica, sans-serif;">Your password has been setup - "<span style="font-size: 14pt;"><strong>SWUG19</strong></span>".</span></p>
+<p style="margin: 0in 0in 0.0001pt; font-size: 12pt; font-family: 'Times New Roman', serif;">&nbsp;</p>
+<p>&nbsp;</p>
+<p style="margin: 0in 0in 0.0001pt; font-size: 12pt; font-family: 'Times New Roman', serif;"><span style="font-family: arial, helvetica, sans-serif; font-size: 14pt;"><strong><span style="color: black;">Next Steps:</span></strong></span></p>
+<ol style="margin-bottom: 0in; list-style-position: inside;">
+<li style="font-size: 11pt; font-family: Calibri, sans-serif; color: black;"><span style="font-family: arial, helvetica, sans-serif;"><a title="Log into the SWUG portal" href="https://shc.service-now.com/swug19">Log into the SWUG portal</a> and select the sessions you would like to attend.&nbsp;</span>
+<ul>
+<li style="font-size: 11pt; font-family: Calibri, sans-serif; color: black;"><span style="font-family: arial, helvetica, sans-serif;">Once you have selected your sessions, <a title="click here" href="https://shc.service-now.com/swug19?id=swug_myschedule">click here</a> to review your selections.&nbsp;</span></li>
+</ul>
+</li>
+<li style="font-size: 11pt; font-family: Calibri, sans-serif; color: black;"><span style="font-family: arial, helvetica, sans-serif;">Book your hotel. A HonorHealth group rate has been setup for you at Marriott TownePlace Suites (Must book by 2/28/2019) <a title="click here to lock in this rate." href="https://www.marriott.com/event-reservations/reservation-link.mi?id=1544553153683&amp;key=GRP&amp;app=resvlink">click here to lock in this rate.</a></span>
+<ul>
+<li style="font-size: 11pt; font-family: Calibri, sans-serif; color: black;"><span style="font-family: arial, helvetica, sans-serif;"><a title="Or click here to search for other hotels in the area." href="https://www.google.com/search?safe=active&amp;rlz=1C1GCEA_enUS780US780&amp;rlla=0&amp;hotel_dates=2019-03-29%2C2019-03-30&amp;tbm=lcl&amp;ei=ytsOW46KFJLw9AOW-YOQCw&amp;hotel_occupancy=2&amp;q=hotels+near+honorhealth+scottsdale+shea+medical+center&amp;oq=hotels+near+honorhealth+scottsdale+shea+medical+center&amp;gs_l=psy-ab.3..33i22i29i30k1l10.103466.114359.0.115409.53.31.1.12.12.0.328.3733.0j12j6j1.19.0....0...1c.1.64.psy-ab..23.29.3144...0j0i22i30k1j33i160k1j0i22i10i30k1j33i21k1.0.kJGRZHg2Uc8#rlfi=hd:2019-03-29,2019-03-30;si:;mv:!1m3!1d49377.04460423796!2d-111.90407059999998!3d33.57620975!2m3!1f0!2f0!3f0!3m2!1i379!2i713!4f13.1;tbs:lf_hd:-1,lf_ho:2,lrf:!1m4!1u13!2m2!13m1!1b1!1m4!1u10!2m2!11m1!1e4!1m4!1u10!2m2!11m1!1e5!1m4!1u10!2m2!11m1!1e9!1m4!1u10!2m2!11m1!1e10!1m4!1u10!2m2!11m1!1e2!1m4!1u10!2m2!11m1!1e3!2m21!1e7!4m4!7m3!1m1!1u75!3sUSD!4m4!7m3!1m1!1u125!3sUSD!4m4!7m3!1m1!1u150!3sUSD!4m4!7m3!1m1!1u175!3sUSD!2m1!1e2!2m1!1e4!2m1!1e13!2m19!1e10!4m2!11m1!1e4!4m2!11m1!1e5!4m2!11m1!1e9!4m2!11m1!1e10!4m2!11m1!1e2!4m2!11m1!1e3!2m7!1e17!4m2!17m1!1e3!4m2!17m1!1e8!3sIAE,lf:1,lf_ui:6">Or click here to search for other hotels in the area.</a>&nbsp;</span></li>
+</ul>
+</li>
+<li style="font-size: 11pt; font-family: Calibri, sans-serif; color: black;"><span style="font-family: arial, helvetica, sans-serif;"><a title="Click here" href="https://shc.service-now.com/sys_attachment.do?sys_id=f75db322db572bc0808f68461b96193a">Click here</a> to print or download a map of our Shea campus for parking and meeting room locations.&nbsp;</span></li>
+<li style="font-size: 11pt; font-family: Calibri, sans-serif; color: black;"><span style="font-family: arial, helvetica, sans-serif;">Join our <a title="Epic Community Page" href="https://userweb.epic.com/Topic/446">Epic Community Page</a></span></li>
+</ol>
+<p style="margin: 0in 0in 0.0001pt 81pt; font-size: 12pt; font-family: 'Times New Roman', serif;"><span style="font-family: arial, helvetica, sans-serif;"><span style="font-size: 11pt; color: black;">&nbsp;</span></span></p>
+<p style="margin: 0in 0in 0.0001pt 81pt; font-size: 12pt; font-family: 'Times New Roman', serif;">&nbsp;</p>
+<p style="margin: 0in 0in 0.0001pt; font-size: 12pt; font-family: 'Times New Roman', serif;">&nbsp;</p>
+<p style="margin: 0in 0in 0.0001pt; font-size: 12pt; font-family: 'Times New Roman', serif;"><span style="font-family: arial, helvetica, sans-serif; font-size: 14pt;"><strong><span style="color: black;">Any Questions?</span></strong></span></p>
+<p style="margin: 0in 0in 0.0001pt; font-size: 12pt; font-family: 'Times New Roman', serif;"><span style="font-family: arial, helvetica, sans-serif;"><a style="color: #0563c1; text-decoration: underline;" href="mailto:SWUGM@honorhealth.com"><span style="font-size: 11pt; color: black;">Please send an email to </span></a><a style="color: #0563c1; text-decoration: underline;" href="mailto:SWUGM@honorhealth.com">SWUGM@honorhealth.com</a>.</span></p>
+<p style="margin: 0in 0in 0.0001pt; font-size: 12pt; font-family: 'Times New Roman', serif;"><span style="font-size: 11pt; font-family: arial, helvetica, sans-serif; color: black;">&nbsp;</span></p>
+<p style="margin: 0in 0in 0.0001pt; font-size: 12pt; font-family: 'Times New Roman', serif;"><span style="font-size: 11pt; font-family: arial, helvetica, sans-serif; color: black;">Thanks again and see you in March!</span></p>
+<p style="margin: 0in 0in 0.0001pt; font-size: 12pt; font-family: 'Times New Roman', serif;"><span style="font-size: 11pt; font-family: arial, helvetica, sans-serif; color: black;">&nbsp;</span></p>
+<p style="margin: 0in 0in 0.0001pt; font-size: 12pt; font-family: 'Times New Roman', serif;"><span style="font-size: 11pt; font-family: arial, helvetica, sans-serif; color: black;">SWUGM 2019 Presenters Committee</span></p>
+<hr style="height: 2px; border: none; color: #000; background-color: #72246c;" />
+<p>&nbsp;</p>
+<p>&nbsp;</p>]]></message_html>
+        <message_list/>
+        <message_text/>
+        <name>SWUG Registration Confirmation</name>
+        <omit_watermark>true</omit_watermark>
+        <order>100</order>
+        <push_message_only>false</push_message_only>
+        <recipient_fields>email</recipient_fields>
+        <recipient_groups/>
+        <recipient_users/>
+        <reply_to>SWUGM@HonorHealth.com </reply_to>
+        <send_self>true</send_self>
+        <sms_alternate/>
+        <style/>
+        <subject>Thank you for your registration to to attend SWUGM 2019</subject>
+        <subscribable>false</subscribable>
+        <sys_class_name>sysevent_email_action</sys_class_name>
+        <sys_created_by>LGOMEZ</sys_created_by>
+        <sys_created_on>2019-02-04 21:00:40</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>648a5f27db132b4040f8fcfa0c961928</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>SWUG Registration Confirmation</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="SWUG 19" source="x_sthc_swug_19">89eb904ddb71138040f8fcfa0c961950</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="SWUG 19">89eb904ddb71138040f8fcfa0c961950</sys_scope>
+        <sys_update_name>sysevent_email_action_648a5f27db132b4040f8fcfa0c961928</sys_update_name>
+        <sys_updated_by>LGOMEZ</sys_updated_by>
+        <sys_updated_on>2019-02-04 23:09:38</sys_updated_on>
+        <sys_version>2</sys_version>
+        <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
+        <type>email</type>
+        <weight>0</weight>
+        <x_ctv_sc_notify_in_connect>false</x_ctv_sc_notify_in_connect>
+    </sysevent_email_action>
+</record_update>
